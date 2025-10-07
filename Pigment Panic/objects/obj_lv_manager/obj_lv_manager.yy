@@ -1,16 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_tile_parent",
+  "%Name":"obj_lv_manager",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":true,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":true,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":true,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":63,"eventType":7,"isDnD":true,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_tile_parent",
+  "name":"obj_lv_manager",
   "overriddenProperties":[],
   "parent":{
-    "name":"tiles",
-    "path":"folders/Objects/tiles.yy",
+    "name":"managers",
+    "path":"folders/Objects/managers.yy",
   },
   "parentObjectId":null,
   "persistent":false,
