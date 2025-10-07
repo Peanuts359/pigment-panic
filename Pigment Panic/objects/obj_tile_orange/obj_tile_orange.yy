@@ -1,13 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_red",
+  "%Name":"obj_tile_orange",
   "eventList":[],
   "managed":true,
-  "name":"obj_red",
+  "name":"obj_tile_orange",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"tiles",
+    "path":"folders/Objects/tiles.yy",
   },
   "parentObjectId":{
     "name":"obj_tile_parent",
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_red",
-    "path":"sprites/spr_red/spr_red.yy",
+    "name":"spr_tile_orange",
+    "path":"sprites/spr_tile_orange/spr_tile_orange.yy",
   },
   "spriteMaskId":null,
   "visible":true,
