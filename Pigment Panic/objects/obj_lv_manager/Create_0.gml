@@ -1,9 +1,9 @@
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 790810B4
-/// @DnDArgument : "expr" "1000"
+/// @DnDArgument : "expr" "300"
 /// @DnDArgument : "var" "time_left"
-time_left = 1000;
+time_left = 300;
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
