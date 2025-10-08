@@ -1,13 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_sidebar",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":true,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":63,"eventType":7,"isDnD":true,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":true,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_curr_color",
+  "eventList":[],
   "managed":true,
-  "name":"obj_sidebar",
+  "name":"obj_curr_color",
   "overriddenProperties":[],
   "parent":{
     "name":"ui",
@@ -32,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_sidebar",
-    "path":"sprites/spr_sidebar/spr_sidebar.yy",
+    "name":"spr_color_slot",
+    "path":"sprites/spr_color_slot/spr_color_slot.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -1,13 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_sidebar",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":true,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":63,"eventType":7,"isDnD":true,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":true,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_time_box",
+  "eventList":[],
   "managed":true,
-  "name":"obj_sidebar",
+  "name":"obj_time_box",
   "overriddenProperties":[],
   "parent":{
     "name":"ui",
@@ -32,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_sidebar",
-    "path":"sprites/spr_sidebar/spr_sidebar.yy",
+    "name":"spr_box_2",
+    "path":"sprites/spr_box_2/spr_box_2.yy",
   },
   "spriteMaskId":null,
   "visible":true,
