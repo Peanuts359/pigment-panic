@@ -9,3 +9,10 @@ image_speed = 0;
 /// @DnDHash : 1DD8495C
 /// @DnDArgument : "var" "image_index"
 image_index = 0;
+
+/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDVersion : 1
+/// @DnDHash : 514C1FEF
+/// @DnDArgument : "expr" "-1"
+/// @DnDArgument : "var" "box_color"
+box_color = -1;
