@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_title",
+  "%Name":"obj_sidebar",
   "eventList":[],
   "managed":true,
-  "name":"obj_title",
+  "name":"obj_sidebar",
   "overriddenProperties":[],
   "parent":{
     "name":"ui",
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_title",
-    "path":"sprites/spr_title/spr_title.yy",
+    "name":"spr_sidebar",
+    "path":"sprites/spr_sidebar/spr_sidebar.yy",
   },
   "spriteMaskId":null,
   "visible":true,
