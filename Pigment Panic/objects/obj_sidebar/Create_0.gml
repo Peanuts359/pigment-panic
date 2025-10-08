@@ -42,6 +42,6 @@ completed = false;
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 59315202
-/// @DnDArgument : "expr" "3"
+/// @DnDArgument : "expr" "2"
 /// @DnDArgument : "var" "drop_time"
-drop_time = 3;
+drop_time = 2;
