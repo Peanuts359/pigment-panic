@@ -40,6 +40,7 @@
   "name":"Pigment Panic",
   "resources":[
     {"id":{"name":"fnt_ui","path":"fonts/fnt_ui/fnt_ui.yy",},},
+    {"id":{"name":"obj_bucket","path":"objects/obj_bucket/obj_bucket.yy",},},
     {"id":{"name":"obj_color_slot","path":"objects/obj_color_slot/obj_color_slot.yy",},},
     {"id":{"name":"obj_curr_color","path":"objects/obj_curr_color/obj_curr_color.yy",},},
     {"id":{"name":"obj_score_box","path":"objects/obj_score_box/obj_score_box.yy",},},
@@ -63,6 +64,7 @@
     {"id":{"name":"spr_bg","path":"sprites/spr_bg/spr_bg.yy",},},
     {"id":{"name":"spr_box_2","path":"sprites/spr_box_2/spr_box_2.yy",},},
     {"id":{"name":"spr_box","path":"sprites/spr_box/spr_box.yy",},},
+    {"id":{"name":"spr_bucket","path":"sprites/spr_bucket/spr_bucket.yy",},},
     {"id":{"name":"spr_but_start","path":"sprites/spr_but_start/spr_but_start.yy",},},
     {"id":{"name":"spr_color_slot","path":"sprites/spr_color_slot/spr_color_slot.yy",},},
     {"id":{"name":"spr_sidebar","path":"sprites/spr_sidebar/spr_sidebar.yy",},},

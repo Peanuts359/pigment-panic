@@ -1,11 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_color_slot",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":true,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_bucket",
+  "eventList":[],
   "managed":true,
-  "name":"obj_color_slot",
+  "name":"obj_bucket",
   "overriddenProperties":[],
   "parent":{
     "name":"ui",
@@ -29,10 +27,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_color_slot",
-    "path":"sprites/spr_color_slot/spr_color_slot.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
