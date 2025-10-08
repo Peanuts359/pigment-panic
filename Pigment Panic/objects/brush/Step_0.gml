@@ -34,4 +34,9 @@ surface_reset_target()
 if to_redraw {
 	var new_cursor = sprite_create_from_surface(cur_surface, 0, 0, 256, 256, true, false, 12, 72)
 	cursor_sprite = new_cursor
+	if current_sprite != noone {	
+		sprite_delete(current_sprite)
+	}
+	current_sprite = new_cursor
 }
+surface_free(cur_surface)
