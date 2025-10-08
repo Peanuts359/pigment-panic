@@ -38,3 +38,10 @@ all_colored = false;
 /// @DnDArgument : "expr" "false"
 /// @DnDArgument : "var" "completed"
 completed = false;
+
+/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDVersion : 1
+/// @DnDHash : 59315202
+/// @DnDArgument : "expr" "3"
+/// @DnDArgument : "var" "drop_time"
+drop_time = 3;
