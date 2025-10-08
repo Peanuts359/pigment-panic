@@ -68,6 +68,7 @@
     {"id":{"name":"scr_colors","path":"scripts/scr_colors/scr_colors.yy",},},
     {"id":{"name":"scr_text","path":"scripts/scr_text/scr_text.yy",},},
     {"id":{"name":"scr_unordered_match","path":"scripts/scr_unordered_match/scr_unordered_match.yy",},},
+    {"id":{"name":"scr_update_brush_color","path":"scripts/scr_update_brush_color/scr_update_brush_color.yy",},},
     {"id":{"name":"spr_bg","path":"sprites/spr_bg/spr_bg.yy",},},
     {"id":{"name":"spr_box_2","path":"sprites/spr_box_2/spr_box_2.yy",},},
     {"id":{"name":"spr_box","path":"sprites/spr_box/spr_box.yy",},},
