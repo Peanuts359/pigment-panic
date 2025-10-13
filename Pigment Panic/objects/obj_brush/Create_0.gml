@@ -1,6 +1,3 @@
-window_set_cursor(cr_none)
-cursor_sprite = spr_brush_1
-
 enum cursor_state
 {
 	normal,
@@ -10,13 +7,21 @@ enum cursor_state
 curr_color = -1
 state = cursor_state.normal
 
-clickables = [obj_start, obj_drop]
-colors = [spr_paint_Red, spr_paint_Blue, spr_paint_Yellow, spr_paint_Black, spr_paint_White,
-		  spr_paint_Purple, spr_paint_Green, spr_paint_Orange, spr_paint_Brown]
-drip = [spr_paintdrip_Red, spr_paintdrip_Blue, spr_paintdrip_Yellow, spr_paintdrip_Black, 
-				 spr_paintdrip_White, spr_paintdrip_Purple, spr_paintdrip_Green, 
-				 spr_paintdrip_Orange, spr_paintdrip_Brown]
+brushes = [spr_brush_1, spr_calbrush_1, spr_fanbrush_1, spr_knife_1]
+outlines = [spr_brush_2, spr_calbrush_2, spr_fanbrush_2, spr_knife_2]
+origins = [[12, 72], [27, 81], [24, 69], [27, 69]]
+
+clickables = [obj_start, obj_drop, obj_color_slot, obj_bucket]
+
+tints = [[255, 0, 0], [0, 0, 255], [255, 255, 0], [1, 1, 1], [255, 255, 255],
+		 [255, 0, 255], [0, 255, 0], [255, 101, 0], [169, 101, 24]]
 
 current_sprite = noone
 
 tick = 0
+current_brush = 0
+
+
+// Initialize cursor
+window_set_cursor(cr_none)
+cursor_sprite = brushes[current_brush]
