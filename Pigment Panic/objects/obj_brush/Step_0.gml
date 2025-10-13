@@ -1,6 +1,9 @@
-var coll_obj = collision_circle(mouse_x, mouse_y, 2, clickables, 0, 1);
+var coll_obj = collision_circle(mouse_x, mouse_y, 2, 
+								array_union(default_clickables, unique_clickables[current_brush]), 
+								0, 1);
 
-var to_redraw = false
+// If the left mouse is clicked, then we should redraw
+var to_redraw = mouse_check_button_pressed(mb_left)
 var cur_surface = surface_create(256, 256)
 surface_set_target(cur_surface)
 var x_ori = origins[current_brush][0]
@@ -23,6 +26,8 @@ switch(state)
 			to_redraw = true
 			state = cursor_state.normal
 			scr_update_brush_color(curr_color, x_ori, y_ori)
+		} else {
+			draw_sprite(outlines[current_brush], 0, x_ori, y_ori)
 		}
 }
 

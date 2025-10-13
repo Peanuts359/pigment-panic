@@ -11,7 +11,13 @@ brushes = [spr_brush_1, spr_calbrush_1, spr_fanbrush_1, spr_knife_1]
 outlines = [spr_brush_2, spr_calbrush_2, spr_fanbrush_2, spr_knife_2]
 origins = [[12, 72], [27, 81], [24, 69], [27, 69]]
 
-clickables = [obj_start, obj_drop, obj_color_slot, obj_bucket]
+default_clickables = [obj_start, obj_color_slot, obj_bucket, 
+					  obj_defaultbrush_button, obj_fanbrush_button, obj_calbrush_button, obj_knife_button]
+unique_clickables = [[obj_drop, obj_color_slot, obj_bucket], 
+					 [obj_drop, obj_color_slot, obj_bucket], 
+					 [obj_drop, obj_color_slot, obj_bucket],
+					 []]
+
 
 tints = [[255, 0, 0], [0, 0, 255], [255, 255, 0], [1, 1, 1], [255, 255, 255],
 		 [255, 0, 255], [0, 255, 0], [255, 101, 0], [169, 101, 24]]
@@ -20,7 +26,6 @@ current_sprite = noone
 
 tick = 0
 current_brush = 0
-
 
 // Initialize cursor
 window_set_cursor(cr_none)
