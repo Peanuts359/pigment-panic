@@ -28,6 +28,14 @@ current_sprite = noone
 tick = 0
 current_brush = 0
 
+// Every frame, this varaible decides whether we need to redraw the sprite
+to_redraw = false
+
 // Initialize cursor
 window_set_cursor(cr_none)
 cursor_sprite = brushes[current_brush]
+
+function forceRedraw() {
+	to_redraw = true
+	scr_update_brush_color(curr_color, origins[current_brush][0], origins[current_brush][1])
+}
