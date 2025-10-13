@@ -12,3 +12,5 @@ completed = false;
 
 drop_time = 2;
 
+// Store a reference to the brush object
+brush = instance_nearest(x, y, obj_brush)
