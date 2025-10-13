@@ -27,8 +27,8 @@
   "nineSlice":null,
   "origin":9,
   "parent":{
-    "name":"paintdrip",
-    "path":"folders/Sprites/brush/paintdrip.yy",
+    "name":"paint",
+    "path":"folders/Sprites/brush/paint.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
