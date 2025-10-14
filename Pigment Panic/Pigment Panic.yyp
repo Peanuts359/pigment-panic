@@ -96,6 +96,7 @@
     {"id":{"name":"spr_sidebar","path":"sprites/spr_sidebar/spr_sidebar.yy",},},
     {"id":{"name":"spr_tileframe","path":"sprites/spr_tileframe/spr_tileframe.yy",},},
     {"id":{"name":"spr_title","path":"sprites/spr_title/spr_title.yy",},},
+    {"id":{"name":"spr_water_drop_icon","path":"sprites/spr_water_drop_icon/spr_water_drop_icon.yy",},},
     {"id":{"name":"spr_water_tap","path":"sprites/spr_water_tap/spr_water_tap.yy",},},
   ],
   "resourceType":"GMProject",
