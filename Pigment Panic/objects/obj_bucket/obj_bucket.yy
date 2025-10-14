@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_bucket",
-    "path":"sprites/spr_bucket/spr_bucket.yy",
+    "name":"spr_water_tap",
+    "path":"sprites/spr_water_tap/spr_water_tap.yy",
   },
   "spriteMaskId":null,
   "visible":true,
