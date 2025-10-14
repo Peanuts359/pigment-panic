@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_score_box",
+  "%Name":"obj_mistake_box",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":true,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_score_box",
+  "name":"obj_mistake_box",
   "overriddenProperties":[],
   "parent":{
     "name":"ui",
@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_box",
-    "path":"sprites/spr_box/spr_box.yy",
+    "name":"spr_mistakes",
+    "path":"sprites/spr_mistakes/spr_mistakes.yy",
   },
   "spriteMaskId":null,
   "visible":true,
