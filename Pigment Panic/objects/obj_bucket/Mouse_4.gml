@@ -1,6 +1,8 @@
-/// @DnDAction : YoYo Games.Common.Set_Global
-/// @DnDVersion : 1
-/// @DnDHash : 7107CB95
-/// @DnDArgument : "value" "-1"
-/// @DnDArgument : "var" "curr_color"
-global.curr_color = -1;
+if global.curr_color != Color.NONE {
+	if brush.watercolor_status = 0 {
+		brush.watercolor_status = 1
+	} else {
+		global.curr_color = Color.NONE;	
+		brush.watercolor_status = 0
+	}
+}

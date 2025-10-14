@@ -10,6 +10,11 @@ draw_sprite(brushes[current_brush], 0, x_ori, y_ori)
 
 to_redraw = false
 
+// Reset watercolor status if not holding paint
+if variable_global_exists("curr_color") and global.curr_color == Color.NONE {
+	watercolor_status = 0	
+}
+
 // Update cursor sprite
 switch(state)
 {
@@ -44,13 +49,17 @@ if (tick >= 120) {
 	tick = 0
 }
 
+// Check if using watercolor
+if watercolor_status == 1 {
+	draw_sprite(spr_water_drop_icon, 0, 0, 0)	
+}
+
 // If the left mouse is clicked, then we should always redraw (and update the color)
 if mouse_check_button_pressed(mb_left) {
 	forceRedraw()
 }
 
 // Decide whether to draw the new sprite
-
 surface_reset_target()
 if to_redraw {
 	var new_cursor = sprite_create_from_surface(cur_surface, 0, 0, 256, 256, true, false, x_ori, y_ori)
