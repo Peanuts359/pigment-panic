@@ -1,0 +1,1 @@
+instance_nearest(x, y, obj_brush).current_brush = 0

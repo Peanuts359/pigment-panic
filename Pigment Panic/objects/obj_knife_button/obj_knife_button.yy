@@ -1,16 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_tile_parent",
+  "%Name":"obj_knife_button",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":true,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_tile_parent",
+  "name":"obj_knife_button",
   "overriddenProperties":[],
   "parent":{
-    "name":"tiles",
-    "path":"folders/Objects/tiles.yy",
+    "name":"ui",
+    "path":"folders/Objects/ui.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -30,7 +29,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_knife_ui",
+    "path":"sprites/spr_knife_ui/spr_knife_ui.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
