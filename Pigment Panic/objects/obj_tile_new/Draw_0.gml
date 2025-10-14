@@ -10,4 +10,4 @@ if color_index != Color.NONE and fill_status > -1 {
 }
 
 // Draw color symbol
-draw_sprite(spr_color_alphabet, 2 * desired_color, x, y)
+draw_sprite(spr_color_alphabet, 2 * desired_color + desired_fill, x, y)
