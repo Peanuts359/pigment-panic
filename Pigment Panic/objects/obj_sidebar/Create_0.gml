@@ -1,4 +1,4 @@
-global.time_left = 300;
+global.time_left = level_time;
 global.mistakes = 0;
 global.total_tiles = 0;
 global.filled_tiles = 0;
