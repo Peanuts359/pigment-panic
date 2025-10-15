@@ -18,7 +18,6 @@
     {"name":"inst_3833662","path":"rooms/rm_lv1/rm_lv1.yy",},
     {"name":"inst_3629FA59","path":"rooms/rm_lv1/rm_lv1.yy",},
     {"name":"inst_7585261D","path":"rooms/rm_lv1/rm_lv1.yy",},
-    {"name":"inst_4BC781F2","path":"rooms/rm_lv1/rm_lv1.yy",},
     {"name":"inst_2155BF4","path":"rooms/rm_lv1/rm_lv1.yy",},
     {"name":"inst_6769733A","path":"rooms/rm_lv1/rm_lv1.yy",},
     {"name":"inst_37722FF0","path":"rooms/rm_lv1/rm_lv1.yy",},
@@ -83,11 +82,15 @@
     {"name":"inst_404D7343","path":"rooms/rm_lv1/rm_lv1.yy",},
     {"name":"inst_65CEAB83","path":"rooms/rm_lv1/rm_lv1.yy",},
     {"name":"inst_504515CB","path":"rooms/rm_lv1/rm_lv1.yy",},
+    {"name":"inst_317A18FB","path":"rooms/rm_lv1/rm_lv1.yy",},
+    {"name":"inst_36F4B3F5","path":"rooms/rm_lv1/rm_lv1.yy",},
   ],
   "isDnd":false,
   "layers":[
     {"$GMRInstanceLayer":"","%Name":"Cursor","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v2","%Name":"inst_3F9E6CBB","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3F9E6CBB","objectId":{"name":"obj_brush","path":"objects/obj_brush/obj_brush.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":128.0,"y":-64.0,},
+        {"$GMRInstance":"v2","%Name":"inst_317A18FB","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_317A18FB","objectId":{"name":"obj_enemymanager","path":"objects/obj_enemymanager/obj_enemymanager.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":192.0,"y":-64.0,},
+        {"$GMRInstance":"v2","%Name":"inst_36F4B3F5","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_36F4B3F5","objectId":{"name":"obj_level1_data","path":"objects/obj_level1_data/obj_level1_data.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":256.0,"y":-64.0,},
       ],"layers":[],"name":"Cursor","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Instances_drops","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"Instances_drops","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Instances","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
@@ -102,7 +105,6 @@
         {"$GMRInstance":"v2","%Name":"inst_3833662","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3833662","objectId":{"name":"obj_calbrush_button","path":"objects/obj_calbrush_button/obj_calbrush_button.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1152.0,"y":224.0,},
         {"$GMRInstance":"v2","%Name":"inst_3629FA59","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3629FA59","objectId":{"name":"obj_fanbrush_button","path":"objects/obj_fanbrush_button/obj_fanbrush_button.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1024.0,"y":288.0,},
         {"$GMRInstance":"v2","%Name":"inst_7585261D","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7585261D","objectId":{"name":"obj_knife_button","path":"objects/obj_knife_button/obj_knife_button.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1152.0,"y":288.0,},
-        {"$GMRInstance":"v2","%Name":"inst_4BC781F2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4BC781F2","objectId":{"name":"obj_level1_data","path":"objects/obj_level1_data/obj_level1_data.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":64.0,"y":-64.0,},
         {"$GMRInstance":"v2","%Name":"inst_2155BF4","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2155BF4","objectId":{"name":"obj_tile_new","path":"objects/obj_tile_new/obj_tile_new.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_tile_new","path":"objects/obj_tile_new/obj_tile_new.yy",},"propertyId":{"name":"desired_color","path":"objects/obj_tile_new/obj_tile_new.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"12",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":224.0,"y":64.0,},
