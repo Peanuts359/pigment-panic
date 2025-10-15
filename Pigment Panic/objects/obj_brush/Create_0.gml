@@ -18,10 +18,6 @@ unique_clickables = [[obj_drop, obj_color_slot, obj_bucket],
 					 [obj_drop, obj_color_slot, obj_bucket], 
 					 [obj_drop, obj_color_slot, obj_bucket],
 					 []]
-					 
-global.Color_rgb = [[255, 0, 0], [0, 0, 255], [255, 255, 0], [35, 35, 35], [255, 255, 255],
-		 [255, 0, 255], [0, 255, 0], [255, 101, 0], [169, 101, 24]]
-global.fills = [spr_fill, spr_fill_watercolor]
 
 current_sprite = noone
 

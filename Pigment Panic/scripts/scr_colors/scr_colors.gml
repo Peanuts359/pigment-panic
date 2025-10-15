@@ -27,4 +27,3 @@ enum Color {
 	D_GRAY = 24,
 	L_GRAY = 25
 }
-
