@@ -51,6 +51,7 @@
     {"id":{"name":"obj_defaultbrush_button","path":"objects/obj_defaultbrush_button/obj_defaultbrush_button.yy",},},
     {"id":{"name":"obj_drop","path":"objects/obj_drop/obj_drop.yy",},},
     {"id":{"name":"obj_fanbrush_button","path":"objects/obj_fanbrush_button/obj_fanbrush_button.yy",},},
+    {"id":{"name":"obj_initialize","path":"objects/obj_initialize/obj_initialize.yy",},},
     {"id":{"name":"obj_knife_button","path":"objects/obj_knife_button/obj_knife_button.yy",},},
     {"id":{"name":"obj_mistake_box","path":"objects/obj_mistake_box/obj_mistake_box.yy",},},
     {"id":{"name":"obj_paintdrip","path":"objects/obj_paintdrip/obj_paintdrip.yy",},},

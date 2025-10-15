@@ -8,6 +8,22 @@ enum Color {
     PURPLE = 5,
 	GREEN  = 6,
     ORANGE = 7,
-    BROWN  = 8
+    BROWN  = 8,
+	GRAY = 9,
+	D_RED = 10,
+	L_RED = 11,
+	D_BLUE = 12,
+	L_BLUE = 13,
+	D_YELLOW = 14,
+	L_YELLOW = 15,
+	D_PURPLE = 16,
+	L_PURPLE = 17,
+	D_GREEN = 18,
+	L_GREEN = 19,
+	D_ORANGE = 20,
+	L_ORANGE = 21,
+	D_BROWN = 22,
+	L_BROWN = 23,
+	D_GRAY = 24,
+	L_GRAY = 25
 }
-
