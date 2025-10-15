@@ -1,2 +1,2 @@
 rotate()
-alarm[3] = 180
+alarm[3] = time_before_turn
