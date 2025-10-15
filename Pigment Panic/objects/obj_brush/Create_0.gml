@@ -12,7 +12,7 @@ outlines = [spr_brush_2, spr_calbrush_2, spr_fanbrush_2, spr_knife_2]
 origins = [[12, 72], [27, 81], [24, 69], [27, 69]]
 paint_strips = [spr_paint_White, spr_calpaint_White, spr_fanpaint_White]
 
-default_clickables = [obj_start, obj_color_slot, obj_bucket, 
+default_clickables = [obj_start, obj_color_slot, obj_bucket, obj_to_level1, obj_to_tutorial,
 					  obj_defaultbrush_button, obj_fanbrush_button, obj_calbrush_button, obj_knife_button]
 unique_clickables = [[obj_drop, obj_color_slot, obj_bucket], 
 					 [obj_drop, obj_color_slot, obj_bucket], 

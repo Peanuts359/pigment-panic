@@ -62,6 +62,7 @@ if mouse_check_button_pressed(mb_left) {
 // Decide whether to draw the new sprite
 surface_reset_target()
 if to_redraw {
+	cursor_sprite = noone
 	var new_cursor = sprite_create_from_surface(cur_surface, 0, 0, 256, 256, true, false, x_ori, y_ori)
 	cursor_sprite = new_cursor
 	if current_sprite != noone {	
