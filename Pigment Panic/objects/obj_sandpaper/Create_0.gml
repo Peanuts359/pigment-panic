@@ -1,7 +1,7 @@
 delta_x = 64/60
 delta_y = 0
 speed_mult = 1
-time_before_turn = 2
+time_before_turn = 1
 remaining_turns = 3
 
 timer = time_before_turn
