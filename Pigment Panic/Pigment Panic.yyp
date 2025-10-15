@@ -106,6 +106,7 @@
     {"id":{"name":"spr_paint_White","path":"sprites/spr_paint_White/spr_paint_White.yy",},},
     {"id":{"name":"spr_paintdrip_White","path":"sprites/spr_paintdrip_White/spr_paintdrip_White.yy",},},
     {"id":{"name":"spr_sandpaper","path":"sprites/spr_sandpaper/spr_sandpaper.yy",},},
+    {"id":{"name":"spr_scratch","path":"sprites/spr_scratch/spr_scratch.yy",},},
     {"id":{"name":"spr_sidebar","path":"sprites/spr_sidebar/spr_sidebar.yy",},},
     {"id":{"name":"spr_tileframe","path":"sprites/spr_tileframe/spr_tileframe.yy",},},
     {"id":{"name":"spr_time","path":"sprites/spr_time/spr_time.yy",},},
