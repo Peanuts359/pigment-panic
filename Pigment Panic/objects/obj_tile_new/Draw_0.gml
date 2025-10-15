@@ -7,6 +7,11 @@ if color_index != Color.NONE and fill_status > -1 {
 		global.Color_rgb[color_index][0], 
 		global.Color_rgb[color_index][1], 
 		global.Color_rgb[color_index][2]),1)
+	
+	// Draw damage if damaged
+	if tile_health = 0 {
+			
+	}
 }
 
 // Draw color symbol
