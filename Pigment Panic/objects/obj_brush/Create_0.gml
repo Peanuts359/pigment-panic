@@ -19,7 +19,9 @@ unique_clickables = [[obj_drop, obj_color_slot, obj_tap],
 					 [obj_drop, obj_color_slot, obj_tap],
 					 []]
 
-current_sprite = noone
+current_sprite = -1;   // sprite id we generate
+cursor_sprite  = -1;   // what Draw will render
+cur_surface    = -1;   // <— reusable surface
 
 tick = 0
 current_brush = 0
@@ -29,7 +31,6 @@ to_redraw = false
 
 // Initialize cursor
 window_set_cursor(cr_none)
-cursor_sprite = brushes[current_brush]
 
 function forceRedraw() {
 	to_redraw = true
