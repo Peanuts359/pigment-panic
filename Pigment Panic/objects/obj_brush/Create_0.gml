@@ -23,7 +23,6 @@ current_sprite = noone
 
 tick = 0
 current_brush = 0
-watercolor_status = 0
 
 // Every frame, this varaible decides whether we need to redraw the sprite
 to_redraw = false

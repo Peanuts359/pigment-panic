@@ -10,11 +10,6 @@ draw_sprite(brushes[current_brush], 0, x_ori, y_ori)
 
 to_redraw = false
 
-// Reset watercolor status if not holding paint
-if variable_global_exists("curr_color") and global.curr_color == Color.NONE {
-	watercolor_status = 0	
-}
-
 // Update cursor sprite
 switch(state)
 {
@@ -47,11 +42,6 @@ tick += 1
 if (tick >= 120) {
 	scr_paintdrip_anim(curr_color)
 	tick = 0
-}
-
-// Check if using watercolor
-if watercolor_status == 1 {
-	draw_sprite(spr_water_drop_icon, 0, 0, 0)	
 }
 
 // If the left mouse is clicked, then we should always redraw (and update the color)
