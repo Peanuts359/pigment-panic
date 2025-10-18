@@ -1,1 +1,1 @@
-instance_nearest(x, y, obj_brush).current_brush = 1
+global.sel_brush = 1;

@@ -21,5 +21,5 @@ if color_index != Color.NONE and fill_status > -1 {
 }
 
 // Draw color symbol
-draw_sprite_ext(spr_color_alphabet, 2 * desired_color + desired_fill, x, y,
+draw_sprite_ext(spr_color_alphabet, 2 * desired_color, x, y,
 	image_xscale, image_yscale, 0, make_color_rgb(255, 255, 255), 1)
