@@ -1,16 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_color_slot",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_mixer",
+  "eventList":[],
   "managed":true,
-  "name":"obj_color_slot",
+  "name":"obj_mixer",
   "overriddenProperties":[],
   "parent":{
-    "name":"ui",
-    "path":"folders/Objects/ui.yy",
+    "name":"mixer",
+    "path":"folders/Objects/ui/mixer.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -31,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_color_slot",
-    "path":"sprites/spr_color_slot/spr_color_slot.yy",
+    "name":"spr_mixer",
+    "path":"sprites/spr_mixer/spr_mixer.yy",
   },
   "spriteMaskId":null,
   "visible":true,

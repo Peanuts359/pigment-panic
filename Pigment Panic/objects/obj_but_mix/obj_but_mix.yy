@@ -1,16 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_color_slot",
+  "%Name":"obj_but_mix",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_color_slot",
+  "name":"obj_but_mix",
   "overriddenProperties":[],
   "parent":{
-    "name":"ui",
-    "path":"folders/Objects/ui.yy",
+    "name":"mixer",
+    "path":"folders/Objects/ui/mixer.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -31,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_color_slot",
-    "path":"sprites/spr_color_slot/spr_color_slot.yy",
+    "name":"spr_but_mix",
+    "path":"sprites/spr_but_mix/spr_but_mix.yy",
   },
   "spriteMaskId":null,
   "visible":true,
