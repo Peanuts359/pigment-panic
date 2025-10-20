@@ -1,5 +1,3 @@
-audio_play_sound(snd_mistake, 0, false);
-
 /// obj_but_mix : Left Pressed
 
 // collect inputs by slot_index

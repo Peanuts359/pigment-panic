@@ -48,56 +48,73 @@ function mix2(a, b) {
 
 
 function mix3(a, b, c) {
-    var mix_colors = [];
-    if (a != Color.NONE) array_push(mix_colors, a);
-    if (b != Color.NONE) array_push(mix_colors, b);
-    if (c != Color.NONE) array_push(mix_colors, c);
+    // collect non-empty
+    var cols = [];
+    if (a != Color.NONE) array_push(cols, a);
+    if (b != Color.NONE) array_push(cols, b);
+    if (c != Color.NONE) array_push(cols, c);
 
-    var n = array_length(mix_colors);
+    var n = array_length(cols);
     if (n == 0) return Color.NONE;
-    if (n == 1) return mix_colors[0];
-    if (n == 2) return mix2(mix_colors[0], mix_colors[1]);
+    if (n == 1) return cols[0];
+    if (n == 2) return mix2(cols[0], cols[1]);
 
     // R + B + Y -> BROWN
-    var hasR = array_contains(mix_colors, Color.RED);
-    var hasB = array_contains(mix_colors, Color.BLUE);
-    var hasY = array_contains(mix_colors, Color.YELLOW);
+    var hasR = array_contains(cols, Color.RED);
+    var hasB = array_contains(cols, Color.BLUE);
+    var hasY = array_contains(cols, Color.YELLOW);
     if (hasR && hasB && hasY) return Color.BROWN;
 
-    // Precompute all pair mixes
-    var p1 = mix2(mix_colors[0], mix_colors[1]);
-    var p2 = mix2(mix_colors[0], mix_colors[2]);
-    var p3 = mix2(mix_colors[1], mix_colors[2]);
+    var hasWhite = array_contains(cols, Color.WHITE);
+    var hasBlack = array_contains(cols, Color.BLACK);
+    var hasNone  = (a==Color.NONE || b==Color.NONE || c==Color.NONE);
 
-    // If WHITE present, try to tint any valid pair result
-    if (array_contains(mix_colors, Color.WHITE)) {
-        var pair_light = (p1 != Color.NONE) ? p1 : ((p2 != Color.NONE) ? p2 : p3);
-        if (pair_light != Color.NONE) return light_of(pair_light);
+    // collect colors excluding pure tints (white/black)
+    var base = [];
+    for (var i = 0; i < 3; i++) {
+        var ci = cols[i];
+        if (ci != Color.WHITE && ci != Color.BLACK) array_push(base, ci);
     }
 
-    // If BLACK present, try to darken any valid pair result
-    if (array_contains(mix_colors, Color.BLACK)) {
-        var pair_dark = (p1 != Color.NONE) ? p1 : ((p2 != Color.NONE) ? p2 : p3);
-        if (pair_dark != Color.NONE) return dark_of(pair_dark);
-    }
-
-    // If no pair mixes to anything AND we had WHITE/BLACK in the set, it's invalid
-    if (p1 == Color.NONE && p2 == Color.NONE && p3 == Color.NONE) {
-        if (array_contains(mix_colors, Color.WHITE) || array_contains(mix_colors, Color.BLACK)) {
-            return Color.NONE; // prevents e.g. GREEN + BLUE + WHITE -> WHITE
+    // ---- TINT RULES (only use the two non-tint colors) ----
+    if (hasWhite) {
+        if (array_length(base) == 2) {
+            var m = mix2(base[0], base[1]);         // excludes WHITE
+            if (m != Color.NONE) return light_of(m);
+            return Color.NONE;                       // don't tint via (color, WHITE) + 3rd color
+        } else if (array_length(base) == 1 && hasNone) {
+            return light_of(base[0]);                // base + WHITE + NONE
+        } else {
+            return Color.NONE;                       // no valid white-tint scenario
         }
     }
 
-    // Fallback: associative pair mixing for non-tint triples that do have a valid pair
+    if (hasBlack) {
+        if (array_length(base) == 2) {
+            var m2 = mix2(base[0], base[1]);        // excludes BLACK
+            if (m2 != Color.NONE) return dark_of(m2);
+            return Color.NONE;                      // don't tint via (color, BLACK) + 3rd color
+        } else if (array_length(base) == 1 && hasNone) {
+            return dark_of(base[0]);                // base + BLACK + NONE
+        } else {
+            return Color.NONE;                      // no valid black-tint scenario
+        }
+    }
+
+    // ---- No WHITE/BLACK present: normal associative mixing ----
+    var p1 = mix2(cols[0], cols[1]);
+    var p2 = mix2(cols[0], cols[2]);
+    var p3 = mix2(cols[1], cols[2]);
+
     var r = (p1 != Color.NONE) ? p1 : ((p2 != Color.NONE) ? p2 : p3);
-    if (r == Color.NONE) return Color.NONE;
+    if (r == Color.NONE) return Color.NONE;         // nothing mixes
 
-    // Fold the third color in; order is safe for your rules
-    r = mix2(r, mix_colors[0]);
-    r = mix2(r, mix_colors[1]);
-    r = mix2(r, mix_colors[2]);
-
+    // fold in remaining colors (safe – none are WHITE/BLACK here)
+    r = mix2(r, cols[0]);
+    r = mix2(r, cols[1]);
+    r = mix2(r, cols[2]);
     return r;
 }
+
 
 
