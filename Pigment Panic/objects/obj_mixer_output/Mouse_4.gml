@@ -1,4 +1,8 @@
 /// @description Execute Code
+// if both the current and box colors are blank, do nothing
+if (global.curr_color == Color.NONE && box_color == Color.NONE) {
+    exit;
+}
 
 // if exactly one of the current and mixer output colors is blank, swap them
 if ((global.curr_color == Color.NONE) ^^ (box_color == Color.NONE)) {
