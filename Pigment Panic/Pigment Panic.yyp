@@ -83,6 +83,7 @@
     {"id":{"name":"rm_result","path":"rooms/rm_result/rm_result.yy",},},
     {"id":{"name":"rm_start","path":"rooms/rm_start/rm_start.yy",},},
     {"id":{"name":"rm_tutorial","path":"rooms/rm_tutorial/rm_tutorial.yy",},},
+    {"id":{"name":"scr_color_mixer","path":"scripts/scr_color_mixer/scr_color_mixer.yy",},},
     {"id":{"name":"scr_color_table","path":"scripts/scr_color_table/scr_color_table.yy",},},
     {"id":{"name":"scr_colors","path":"scripts/scr_colors/scr_colors.yy",},},
     {"id":{"name":"scr_grades","path":"scripts/scr_grades/scr_grades.yy",},},
