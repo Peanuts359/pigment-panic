@@ -22,6 +22,7 @@ if ((global.curr_color == Color.NONE) ^^ (box_color == Color.NONE)) {
 	exit;
 }
 
+/*
 // otherwise, attempt to mix where possible
 var a = global.curr_color;
 var b = box_color;
@@ -37,3 +38,4 @@ if (result != Color.NONE) {
 							global.Color_rgb[box_color][1], 
 							global.Color_rgb[box_color][2])
 }
+*/
