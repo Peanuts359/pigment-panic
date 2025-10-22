@@ -1,15 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_to_tutorial",
+  "%Name":"obj_lv_one_data",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":true,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_to_tutorial",
+  "name":"obj_lv_one_data",
   "overriddenProperties":[],
   "parent":{
-    "name":"ui",
-    "path":"folders/Objects/ui.yy",
+    "name":"level data",
+    "path":"folders/Objects/level data.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -29,10 +29,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_to_tutorial",
-    "path":"sprites/spr_to_tutorial/spr_to_tutorial.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

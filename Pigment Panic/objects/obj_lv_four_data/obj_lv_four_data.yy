@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_level1_data",
+  "%Name":"obj_lv_four_data",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_level1_data",
+  "name":"obj_lv_four_data",
   "overriddenProperties":[],
   "parent":{
     "name":"level data",
