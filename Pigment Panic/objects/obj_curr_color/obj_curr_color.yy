@@ -3,14 +3,14 @@
   "%Name":"obj_curr_color",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":true,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":true,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_curr_color",
   "overriddenProperties":[],
   "parent":{
-    "name":"ui",
-    "path":"folders/Objects/ui.yy",
+    "name":"mixer",
+    "path":"folders/Objects/ui/mixer.yy",
   },
   "parentObjectId":null,
   "persistent":false,
