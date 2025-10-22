@@ -1,17 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"obj_lv_four",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":true,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_tile_big",
+  "eventList":[],
   "managed":true,
-  "name":"obj_lv_four",
+  "name":"obj_tile_big",
   "overriddenProperties":[],
   "parent":{
-    "name":"levels",
-    "path":"folders/Objects/levels.yy",
+    "name":"tiles",
+    "path":"folders/Objects/tiles.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_tile_new",
+    "path":"objects/obj_tile_new/obj_tile_new.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_lv_four",
-    "path":"sprites/spr_lv_four/spr_lv_four.yy",
+    "name":"spr_tileframe_1",
+    "path":"sprites/spr_tileframe_1/spr_tileframe_1.yy",
   },
   "spriteMaskId":null,
   "visible":true,

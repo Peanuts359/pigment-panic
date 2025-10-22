@@ -31,6 +31,7 @@
   "physicsStartAwake":true,
   "properties":[
     {"$GMObjectProperty":"v1","%Name":"level_time","filters":[],"listItems":[],"multiselect":false,"name":"level_time","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"300","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"drop_interval","filters":[],"listItems":[],"multiselect":false,"name":"drop_interval","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"2","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
