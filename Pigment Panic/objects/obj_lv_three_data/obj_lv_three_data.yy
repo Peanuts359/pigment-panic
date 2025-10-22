@@ -1,15 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_but_levels",
+  "%Name":"obj_lv_three_data",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_but_levels",
+  "name":"obj_lv_three_data",
   "overriddenProperties":[],
   "parent":{
-    "name":"results",
-    "path":"folders/Objects/results.yy",
+    "name":"level data",
+    "path":"folders/Objects/level data.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -29,10 +29,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_but_menu",
-    "path":"sprites/spr_but_menu/spr_but_menu.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

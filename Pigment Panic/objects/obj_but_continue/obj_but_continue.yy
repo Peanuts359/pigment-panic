@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_but_levels",
+  "%Name":"obj_but_continue",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_but_levels",
+  "name":"obj_but_continue",
   "overriddenProperties":[],
   "parent":{
     "name":"results",
@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_but_menu",
-    "path":"sprites/spr_but_menu/spr_but_menu.yy",
+    "name":"spr_but_continue",
+    "path":"sprites/spr_but_continue/spr_but_continue.yy",
   },
   "spriteMaskId":null,
   "visible":true,

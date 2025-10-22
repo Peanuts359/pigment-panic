@@ -11,3 +11,10 @@ room_goto(rm_lv_one);
 /// @DnDArgument : "value" "1"
 /// @DnDArgument : "var" "last_visited_level"
 global.last_visited_level = 1;
+
+/// @DnDAction : YoYo Games.Common.Set_Global
+/// @DnDVersion : 1
+/// @DnDHash : 2EA2A940
+/// @DnDArgument : "value" "true"
+/// @DnDArgument : "var" "timer_active"
+global.timer_active = true;
