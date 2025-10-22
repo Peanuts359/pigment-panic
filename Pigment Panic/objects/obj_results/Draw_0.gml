@@ -32,7 +32,7 @@ var txt_clear    = "Mural Completion: "  + string_format(global.tiles_cleared, 0
 var cx   = room_width * 0.5;             // center X
 var midY = (topY + bottomY) * 0.5;       // vertical middle of the gap
 
-draw_set_font(fnt_ui);
+draw_set_font(fnt_ui_small);
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 draw_set_color(c_black);
@@ -43,3 +43,4 @@ var y0 = midY - line_h;
 draw_text(cx, y0,              txt_grade);
 draw_text(cx, y0 + line_h,     txt_mistakes);
 draw_text(cx, y0 + line_h * 2, txt_clear);
+
