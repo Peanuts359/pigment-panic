@@ -1,0 +1,13 @@
+/// @DnDAction : YoYo Games.Rooms.Go_To_Room
+/// @DnDVersion : 1
+/// @DnDHash : 59430244
+/// @DnDArgument : "room" "rm_lv_three"
+/// @DnDSaveInfo : "room" "rm_lv_three"
+room_goto(rm_lv_three);
+
+/// @DnDAction : YoYo Games.Common.Set_Global
+/// @DnDVersion : 1
+/// @DnDHash : 0761D017
+/// @DnDArgument : "value" "3"
+/// @DnDArgument : "var" "last_visited_level"
+global.last_visited_level = 3;
