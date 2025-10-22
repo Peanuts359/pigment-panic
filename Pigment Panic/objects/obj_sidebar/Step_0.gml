@@ -13,7 +13,9 @@ if (!timer_fired && !completed) {
 		var yy = irandom(room_height - 32);
 		instance_create_layer(xx, yy, "Drops", obj_drop);
 	}
-    global.time_left -= delta_time / 1_000_000; // in seconds
+	if (global.timer_active) {
+		global.time_left -= delta_time / 1_000_000; // in seconds
+	}
     if (global.time_left <= 0) {
 		global.time_left = 0;
         timer_fired = true;

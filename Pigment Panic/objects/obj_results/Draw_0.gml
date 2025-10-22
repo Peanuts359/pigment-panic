@@ -40,7 +40,14 @@ draw_set_color(c_black);
 var line_h = font_get_size(fnt_ui) + 6;
 var y0 = midY - line_h;
 
-draw_text(cx, y0,              txt_grade);
-draw_text(cx, y0 + line_h,     txt_mistakes);
-draw_text(cx, y0 + line_h * 2, txt_clear);
+if (global.timer_active) {
+	draw_text(cx, y0,              txt_grade);
+	draw_text(cx, y0 + line_h,     txt_mistakes);
+	draw_text(cx, y0 + line_h * 2, txt_clear);
+} else {
+	draw_text(cx, y0,     txt_mistakes);
+	draw_text(cx, y0 + line_h, "Complete the mural with the timer active");
+	draw_text(cx, y0 + line_h * 2, "to receive a grade!");
+}
+
 
