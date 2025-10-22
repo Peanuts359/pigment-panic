@@ -155,8 +155,8 @@
     {"roomId":{"name":"rm_lv_one","path":"rooms/rm_lv_one/rm_lv_one.yy",},},
     {"roomId":{"name":"rm_lv_four","path":"rooms/rm_lv_four/rm_lv_four.yy",},},
     {"roomId":{"name":"rm_result","path":"rooms/rm_result/rm_result.yy",},},
-    {"roomId":{"name":"rm_lv_two","path":"rooms/rm_lv_two/rm_lv_two.yy",},},
     {"roomId":{"name":"rm_lv_three","path":"rooms/rm_lv_three/rm_lv_three.yy",},},
+    {"roomId":{"name":"rm_lv_two","path":"rooms/rm_lv_two/rm_lv_two.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
