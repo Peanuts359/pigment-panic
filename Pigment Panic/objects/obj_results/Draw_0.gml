@@ -45,9 +45,15 @@ if (global.timer_active) {
 	draw_text(cx, y0 + line_h,     txt_mistakes);
 	draw_text(cx, y0 + line_h * 2, txt_clear);
 } else {
-	draw_text(cx, y0,     txt_mistakes);
-	draw_text(cx, y0 + line_h, "Complete the mural with the timer active");
-	draw_text(cx, y0 + line_h * 2, "to receive a grade!");
+	if (global.forfeited) {
+		draw_text(cx, y0, "The level was forfeited.")
+		draw_text(cx, y0 + line_h, "No grade could be given.")
+	} else {
+		draw_text(cx, y0,     txt_mistakes);
+		draw_text(cx, y0 + line_h, "Complete the mural with the timer active");
+		draw_text(cx, y0 + line_h * 2, "to receive a grade!");
+	}
+
 }
 
 
