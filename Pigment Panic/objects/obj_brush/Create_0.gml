@@ -37,27 +37,6 @@ window_set_cursor(cr_none);
 // optional default for the global selector if buttons haven’t set it yet
 if (!variable_global_exists("sel_brush")) global.sel_brush = current_brush;
 
-// how wide/high each little stack cell should render
-stack_cell_w = 16;
-stack_cell_h = 16;
-
-// horizontal gap between cells
-stack_cell_gap = 2;
-
-// how far to offset the first cell from the cursor hot point
-stack_offset_x = 24; // pixels to the right of the brush head
-stack_offset_y = -8; // pixels up/down relative to cursor origin
-
-// how many cells to *display*, regardless of how full the stack is
-stack_display_count = global.brush_max;
-
-// background color for an *empty* slot box outline/fill
-stack_slot_outline_col = c_black;
-stack_slot_empty_col   = c_white;
-
-// thin outline thickness
-stack_outline_thickness = 1;
-
 function forceRedraw() {
     to_redraw = true;
     scr_update_brush_color(

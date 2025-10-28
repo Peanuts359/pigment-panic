@@ -42,17 +42,31 @@ if (to_redraw) {
     var x_ori = origins[current_brush][0];
     var y_ori = origins[current_brush][1];
 
+    // draw into the surface
     surface_set_target(cur_surface);
-    draw_clear_alpha(c_black, 0);               // prevent ghosting
+    draw_clear_alpha(c_black, 0); // transparent background
 
+    // draw base brush
     draw_sprite(brushes[current_brush], 0, x_ori, y_ori);
+
+    // draw outline if highlighting
     if (state == cursor_state.highlighting) {
         draw_sprite(outlines[current_brush], 0, x_ori, y_ori);
     }
+
     surface_reset_target();
 
-    var new_id = sprite_create_from_surface(cur_surface, 0, 0, 256, 256, true, false, x_ori, y_ori);
+    // create sprite from that surface
+    var new_id = sprite_create_from_surface(
+        cur_surface, 0, 0, 256, 256,
+        true,  // removeback
+        false, // smooth
+        x_ori, y_ori
+    );
+
+    // clean old sprite
     if (current_sprite != -1) sprite_delete(current_sprite);
+
     current_sprite = new_id;
     cursor_sprite  = new_id;
 
@@ -60,6 +74,9 @@ if (to_redraw) {
 }
 
 // drip animation
-tick += 1;
-if (tick >= 120) { scr_paintdrip_anim(curr_color); tick = 0; }
+tick++;
+if (tick >= 120) {
+    scr_paintdrip_anim(curr_color);
+    tick = 0;
+}
 
