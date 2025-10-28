@@ -9,7 +9,7 @@ switch (to_level) {
         next_room = rm_lv_one;
         break;
     case 2:
-        next_room = rm_lv_two;
+        next_room = rm_lv_two_mix;
         break;
     case 3:
         next_room = rm_lv_three;
