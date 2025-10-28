@@ -1,3 +1,4 @@
-if global.curr_color != Color.NONE {
-	global.curr_color = Color.NONE;	
+var dumped = brush_pop_bottom();
+if (dumped != Color.NONE) {
+    // optional sound, splash anim, etc
 }

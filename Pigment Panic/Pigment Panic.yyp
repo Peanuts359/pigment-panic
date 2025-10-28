@@ -100,6 +100,7 @@
     {"id":{"name":"rm_lv_two","path":"rooms/rm_lv_two/rm_lv_two.yy",},},
     {"id":{"name":"rm_result","path":"rooms/rm_result/rm_result.yy",},},
     {"id":{"name":"rm_start","path":"rooms/rm_start/rm_start.yy",},},
+    {"id":{"name":"scr_brush_stack","path":"scripts/scr_brush_stack/scr_brush_stack.yy",},},
     {"id":{"name":"scr_color_mixer","path":"scripts/scr_color_mixer/scr_color_mixer.yy",},},
     {"id":{"name":"scr_color_table","path":"scripts/scr_color_table/scr_color_table.yy",},},
     {"id":{"name":"scr_colors","path":"scripts/scr_colors/scr_colors.yy",},},

@@ -1,3 +1,6 @@
+global.brush_stack = [];
+global.brush_max   = 5;
+
 if (instance_number(object_index) > 1) {
     // another cursor already exists (likely the persistent one)
     instance_destroy();
@@ -34,8 +37,11 @@ window_set_cursor(cr_none);
 // optional default for the global selector if buttons haven’t set it yet
 if (!variable_global_exists("sel_brush")) global.sel_brush = current_brush;
 
-
 function forceRedraw() {
     to_redraw = true;
-    scr_update_brush_color(curr_color, origins[current_brush][0], origins[current_brush][1]);
+    scr_update_brush_color(
+        curr_color,
+        origins[current_brush][0],
+        origins[current_brush][1]
+    );
 }

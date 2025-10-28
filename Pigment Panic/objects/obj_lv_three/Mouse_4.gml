@@ -18,3 +18,10 @@ global.last_visited_level = 3;
 /// @DnDArgument : "value" "true"
 /// @DnDArgument : "var" "timer_active"
 global.timer_active = true;
+
+/// @DnDAction : YoYo Games.Common.Set_Global
+/// @DnDVersion : 1
+/// @DnDHash : 2E4CAA81
+/// @DnDArgument : "value" "3"
+/// @DnDArgument : "var" "drop_life"
+global.drop_life = 3;
