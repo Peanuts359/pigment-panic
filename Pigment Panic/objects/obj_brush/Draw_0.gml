@@ -1,88 +1,77 @@
 /// obj_brush : Draw
 
-// 1. draw the brush cursor sprite itself
-if (cursor_sprite != -1) {
-    draw_sprite(cursor_sprite, 0, mouse_x, mouse_y);
-}
+// 1. draw the actual brush sprite following the mouse
+var mx = mouse_x;
+var my = mouse_y;
+draw_sprite_ext(
+    brushes[current_brush], // sprite index for this brush type
+    0,
+    mx,
+    my,
+    1, 1,
+    0,
+    c_white,
+    1
+);
 
-// 2. draw the stack preview beside the brush
+// 2. draw the stack HUD next to the brush
 
-// grab sprite info so we can position the stack next to it
-var __spr        = cursor_sprite;
-if (__spr == -1) exit;
+// a) tunable visual constants
+var STACK_OX   = 20; // shift right from brush origin
+var STACK_OY   =  8; // shift down from brush origin
+var SLOT_W     = 10; // each little color box width  (in pixels)
+var SLOT_H     = 10; // each little color box height (in pixels)
+var SLOT_GAP   =  2; // spacing between boxes
+var MAX_SLOTS  = global.brush_max; // how many boxes to show
 
-var __spr_w      = sprite_get_width(__spr);
-var __spr_h      = sprite_get_height(__spr);
-var __spr_off_x  = sprite_get_xoffset(__spr);
-var __spr_off_y  = sprite_get_yoffset(__spr);
+// b) top-left corner of the first slot
+//    we anchor at the brush position, plus our offsets
+var panel_x = mx + STACK_OX;
+var panel_y = my + STACK_OY;
 
-// figure out where the brush actually appears on screen
-var __brush_left = mouse_x - __spr_off_x;
-var __brush_top  = mouse_y - __spr_off_y;
-var __brush_right = __brush_left + __spr_w;
+// c) get current stack reference
+var bs  = global.brush_stack;
+var len = array_length(bs);
 
-// panel anchor: slots get drawn to the RIGHT of the brush, upper-aligned
-var __panel_x = __brush_right + 4;
-var __panel_y = __brush_top;
+// We'll draw left → right, oldest color first.
+// So slot 0 corresponds to bs[0] (bottom of stack),
+// and the rightmost slot is the "top" (latest pushed).
+for (var i = 0; i < MAX_SLOTS; i++) {
 
-// stack data
-var __cap   = global.brush_max;
-var __stack = global.brush_stack;
-var __len   = array_length(__stack);
+    // position of this slot on screen
+    var slot_x = panel_x + i * (SLOT_W + SLOT_GAP);
+    var slot_y = panel_y;
 
-// visual settings for each little box
-var __box_w = 12;
-var __box_h = 12;
-var __gap   = 2;
+    // which brush color index goes here?
+    // if i < len, we have a real color; otherwise it's empty
+    if (i < len) {
+        var col_id = bs[i];
 
-// We want:
-//   first box (closest to the brush) = top of stack
-//   next box = next item down
-//   etc.
-// So box i shows stack[ len-1-i ] if that index >= 0
-
-for (var __i = 0; __i < __cap; __i++) {
-
-    // where this box is drawn
-    var __bx = __panel_x + __i * (__box_w + __gap);
-    var __by = __panel_y;
-
-    // which stack entry does this box represent?
-    var __stack_index = __len - 1 - __i;
-
-    if (__stack_index >= 0) {
-        // there's actually a color here
-        var __col_id = __stack[__stack_index];
-
-        // get its RGB triplet
-        var __r = global.Color_rgb[__col_id][0];
-        var __g = global.Color_rgb[__col_id][1];
-        var __b = global.Color_rgb[__col_id][2];
+        // Get its RGB from your palette table
+        var r = global.Color_rgb[col_id][0];
+        var g = global.Color_rgb[col_id][1];
+        var b = global.Color_rgb[col_id][2];
 
         // filled rect
         draw_set_alpha(1);
-        draw_set_color(make_color_rgb(__r, __g, __b));
-        draw_rectangle(__bx, __by, __bx + __box_w, __by + __box_h, false);
+        draw_set_color(make_color_rgb(r, g, b));
+        draw_rectangle(slot_x, slot_y, slot_x + SLOT_W, slot_y + SLOT_H, false);
 
         // outline
         draw_set_color(c_black);
-        draw_rectangle(__bx, __by, __bx + __box_w, __by + __box_h, true);
+        draw_rectangle(slot_x, slot_y, slot_x + SLOT_W, slot_y + SLOT_H, true);
 
     } else {
-        // empty slot: transparent fill with visible border
+        // empty slot: transparent inside, black outline
 
-        // transparent fill (alpha 0, so you can "see through")
+        // transparent fill just to clear (alpha 0)
         draw_set_alpha(0);
         draw_set_color(c_white);
-        draw_rectangle(__bx, __by, __bx + __box_w, __by + __box_h, false);
+        draw_rectangle(slot_x, slot_y, slot_x + SLOT_W, slot_y + SLOT_H, false);
 
-        // opaque outline so the box is still visible
+        // outline visible
         draw_set_alpha(1);
         draw_set_color(c_black);
-        draw_rectangle(__bx, __by, __bx + __box_w, __by + __box_h, true);
+        draw_rectangle(slot_x, slot_y, slot_x + SLOT_W, slot_y + SLOT_H, true);
     }
 }
-
-// reset draw state
-draw_set_alpha(1);
-draw_set_color(c_white);
