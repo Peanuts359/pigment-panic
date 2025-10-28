@@ -1,4 +1,4 @@
-global.drop_colors = [0, 1, 2, 3, 4]
+global.drop_colors = [0, 1, 1, 2, 3, 4, 4]
 global.level_tiles = [[ 1,  1,  1,  1, 2],
        [ 4,  4,  4,  1,  1],
        [ 0,  4,  4,  1,  1],
