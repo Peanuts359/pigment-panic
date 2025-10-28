@@ -1,7 +1,3 @@
-if (keyboard_check_pressed(vk_f1)) {
-    show_debug_message("cursor count = " + string(instance_number(obj_brush)));
-}
-
 /// Step — rebuild cursor image only when needed
 
 // brush selection
@@ -28,9 +24,11 @@ switch (state) {
         break;
 }
 
-// held color change forces redraw
-if (variable_global_exists("curr_color")) {
-    if (global.curr_color != curr_color) { curr_color = global.curr_color; to_redraw = true; }
+// held color (top of stack) change forces redraw
+var top_col = brush_top(); // will return Color.NONE if stack empty
+if (top_col != curr_color) {
+    curr_color = top_col;
+    to_redraw  = true;
 }
 
 // clicks force rebuild (if drip/strip visuals update)
