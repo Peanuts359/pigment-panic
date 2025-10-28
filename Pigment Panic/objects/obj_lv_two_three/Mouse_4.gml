@@ -1,9 +1,9 @@
 /// @DnDAction : YoYo Games.Instances.Create_Instance
 /// @DnDVersion : 1
 /// @DnDHash : 08BE9767
-/// @DnDArgument : "objectid" "obj_lv_two_one_data"
-/// @DnDSaveInfo : "objectid" "obj_lv_two_one_data"
-instance_create_layer(0, 0, "Instances", obj_lv_two_one_data);
+/// @DnDArgument : "objectid" "obj_lv_two_three_data"
+/// @DnDSaveInfo : "objectid" "obj_lv_two_three_data"
+instance_create_layer(0, 0, "Instances", obj_lv_two_three_data);
 
 /// @DnDAction : YoYo Games.Common.Set_Global
 /// @DnDVersion : 1
@@ -15,9 +15,9 @@ global.last_visited_level = 1;
 /// @DnDAction : YoYo Games.Common.Set_Global
 /// @DnDVersion : 1
 /// @DnDHash : 42C194DE
-/// @DnDArgument : "value" "false"
+/// @DnDArgument : "value" "true"
 /// @DnDArgument : "var" "timer_active"
-global.timer_active = false;
+global.timer_active = true;
 
 /// @DnDAction : YoYo Games.Common.Set_Global
 /// @DnDVersion : 1

@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_lv_two_data",
+  "%Name":"obj_lv_two_two_data",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_lv_two_data",
+  "name":"obj_lv_two_two_data",
   "overriddenProperties":[],
   "parent":{
     "name":"level data",
