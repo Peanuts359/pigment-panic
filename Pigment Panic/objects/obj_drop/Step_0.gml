@@ -1,9 +1,14 @@
-/// @DnDAction : YoYo Games.Common.Execute_Code
-/// @DnDVersion : 1
-/// @DnDHash : 562F1BA2
-/// @DnDArgument : "code" "/// @description Execute Code$(13_10)self.lifetime -= delta_time / 1_000_000$(13_10)$(13_10)if (self.lifetime <= 0) {$(13_10)	instance_destroy();$(13_10)}"
 /// @description Execute Code
 self.lifetime -= delta_time / 1_000_000
+
+var t = 1 - (self.lifetime / self.lifetime_max);
+if (t < 0) t = 0;
+if (t > 1) t = 1;
+
+var scale_now = 1 + t;
+
+image_xscale = scale_now;
+image_yscale = scale_now;
 
 if (self.lifetime <= 0) {
 	instance_destroy();
