@@ -59,8 +59,8 @@ if (t != noone) {
             for (var i = -1; i <= 1; i++) {
 
                 var u = collision_point(
-                    other.mx + (i * sprite_width),
-                    other.my - sprite_height,
+                    x + (i * sprite_width),
+                    y - sprite_height,
                     obj_tile_new,
                     false,
                     true
