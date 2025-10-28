@@ -1,0 +1,1 @@
+global.brush_stack = [];
