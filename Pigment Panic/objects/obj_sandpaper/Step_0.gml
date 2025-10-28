@@ -1,5 +1,5 @@
-x += delta_x * speed_mult
-y += delta_y * speed_mult
+x += delta_x * speed_mult * max_speed
+y += delta_y * speed_mult * max_speed
 
 timer -= delta_time / 1000000 * speed_mult
 
