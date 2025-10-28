@@ -3,7 +3,7 @@
 /// @DnDHash : 59430244
 /// @DnDArgument : "room" "rm_lv_three"
 /// @DnDSaveInfo : "room" "rm_lv_three"
-room_goto(rm_lv_three);
+room_goto(rm_lv_three_mix);
 
 /// @DnDAction : YoYo Games.Common.Set_Global
 /// @DnDVersion : 1
