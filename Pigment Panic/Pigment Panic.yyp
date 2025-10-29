@@ -76,6 +76,8 @@
     {"id":{"name":"obj_level_builder","path":"objects/obj_level_builder/obj_level_builder.yy",},},
     {"id":{"name":"obj_level_ref_img","path":"objects/obj_level_ref_img/obj_level_ref_img.yy",},},
     {"id":{"name":"obj_level_ref","path":"objects/obj_level_ref/obj_level_ref.yy",},},
+    {"id":{"name":"obj_lv_five_one_data","path":"objects/obj_lv_five_one_data/obj_lv_five_one_data.yy",},},
+    {"id":{"name":"obj_lv_five_one","path":"objects/obj_lv_five_one/obj_lv_five_one.yy",},},
     {"id":{"name":"obj_lv_five_two_data","path":"objects/obj_lv_five_two_data/obj_lv_five_two_data.yy",},},
     {"id":{"name":"obj_lv_five_two","path":"objects/obj_lv_five_two/obj_lv_five_two.yy",},},
     {"id":{"name":"obj_lv_four_data","path":"objects/obj_lv_four_data/obj_lv_four_data.yy",},},
