@@ -1,4 +1,4 @@
-if !global.timer_active {
+if global.continuing {
 	global.grade = Grade.NONE;
 } else {
 	if (global.tiles_cleared >= 100) {

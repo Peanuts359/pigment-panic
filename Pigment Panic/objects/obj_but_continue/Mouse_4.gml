@@ -1,5 +1,6 @@
 var to_level = global.last_visited_level;
 global.timer_active = false;
+global.continuing = true;
 global.last_visited_level = -1;
 
 var next_room;

@@ -40,20 +40,15 @@ draw_set_color(c_black);
 var line_h = font_get_size(fnt_ui) + 6;
 var y0 = midY - line_h;
 
-if (global.timer_active) {
+if (global.forfeited) {
+	draw_text(cx, y0, "The level was forfeited.")
+	draw_text(cx, y0 + line_h, "No grade could be given.")
+} else if (global.continuing) {
+	draw_text(cx, y0,     txt_mistakes);
+	draw_text(cx, y0 + line_h, "Complete the mural in one go");
+	draw_text(cx, y0 + line_h * 2, "to receive a grade!");
+} else {
 	draw_text(cx, y0,              txt_grade);
 	draw_text(cx, y0 + line_h,     txt_mistakes);
-	draw_text(cx, y0 + line_h * 2, txt_clear);
-} else {
-	if (global.forfeited) {
-		draw_text(cx, y0, "The level was forfeited.")
-		draw_text(cx, y0 + line_h, "No grade could be given.")
-	} else {
-		draw_text(cx, y0,     txt_mistakes);
-		draw_text(cx, y0 + line_h, "Complete the mural with the timer active");
-		draw_text(cx, y0 + line_h * 2, "to receive a grade!");
-	}
-
+	draw_text(cx, y0 + line_h * 2, txt_clear);	
 }
-
-

@@ -2,6 +2,7 @@
 /// @DnDVersion : 1
 /// @DnDHash : 08BE9767
 /// @DnDArgument : "objectid" "obj_lv_one_one_data"
+/// @DnDSaveInfo : "objectid" "obj_lv_one_one_data"
 instance_create_layer(0, 0, "Instances", obj_lv_one_one_data);
 
 /// @DnDAction : YoYo Games.Common.Set_Global
