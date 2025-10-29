@@ -7,5 +7,5 @@ global.level_tiles = [[ 1,  1,  1,  1, 2],
 global.tiles_origin = [160, 160]
 global.tiles_scale = [3.5, 3.5]
 global.tiles_sep = [0, 0]
-
+global.ref_img = noone
 instance_destroy()
