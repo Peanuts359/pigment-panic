@@ -8,8 +8,8 @@ var d = collision_point(mx, my, obj_drop, false, true);
 // If using the knife, then skip this block of code
 if (d != noone) and brush_type < 3 {
     with (d) {
-        brush_push(drop_color);
-        instance_destroy();
+        var success = brush_push(drop_color);
+        if success instance_destroy();
     }
     exit;
 }

@@ -36,18 +36,22 @@ var len = array_length(bs);
 // We'll draw left → right, oldest color first.
 // So slot 0 corresponds to bs[0] (bottom of stack),
 // and the rightmost slot is the "top" (latest pushed).
-for (var i = 0; i < MAX_SLOTS; i++) {
+for (var vis_i = 0; vis_i < MAX_SLOTS; vis_i++) {
 
-    // position of this slot on screen
-    var slot_x = panel_x + i * (SLOT_W + SLOT_GAP);
+    // where to draw this slot on screen
+    var slot_x = panel_x + vis_i * (SLOT_W + SLOT_GAP);
     var slot_y = panel_y;
 
-    // which brush color index goes here?
-    // if i < len, we have a real color; otherwise it's empty
-    if (i < len) {
-        var col_id = bs[i];
+    // which brush color goes in this visual slot?
+    // vis_i = 0 should show the most recent color, i.e. bs[len-1]
+    // vis_i = 1 -> bs[len-2], etc.
+    var stack_index = len - 1 - vis_i;
 
-        // Get its RGB from your palette table
+    if (stack_index >= 0) {
+        // slot is occupied by an actual color from stack
+        var col_id = bs[stack_index];
+
+        // color lookup
         var r = global.Color_rgb[col_id][0];
         var g = global.Color_rgb[col_id][1];
         var b = global.Color_rgb[col_id][2];
@@ -58,20 +62,20 @@ for (var i = 0; i < MAX_SLOTS; i++) {
         draw_rectangle(slot_x, slot_y, slot_x + SLOT_W, slot_y + SLOT_H, false);
 
         // outline
-        draw_set_color(c_black);
+        draw_set_color(c_olive);
         draw_rectangle(slot_x, slot_y, slot_x + SLOT_W, slot_y + SLOT_H, true);
 
     } else {
-        // empty slot: transparent inside, black outline
+        // this slot is beyond the current stack => empty visual slot
 
-        // transparent fill just to clear (alpha 0)
+        // transparent interior (alpha 0 but same rect size)
         draw_set_alpha(0);
         draw_set_color(c_white);
         draw_rectangle(slot_x, slot_y, slot_x + SLOT_W, slot_y + SLOT_H, false);
 
-        // outline visible
+        // solid outline so the box still appears
         draw_set_alpha(1);
-        draw_set_color(c_black);
+        draw_set_color(c_olive);
         draw_rectangle(slot_x, slot_y, slot_x + SLOT_W, slot_y + SLOT_H, true);
     }
 }

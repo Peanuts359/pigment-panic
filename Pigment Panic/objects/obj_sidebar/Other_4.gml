@@ -1,6 +1,7 @@
 global.total_tiles = 0;
 global.filled_tiles = 0;
 global.tiles_cleared = 0; 
+global.brush_stack = [];
 
 global.grade = Grade.NONE;
 
