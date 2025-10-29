@@ -1,5 +1,5 @@
 /// @description Execute Code
-self.lifetime -= delta_time / 1_000_000
+self.lifetime -= delta_time / 1_000_000 * global.time_mult
 
 var t = 1 - (self.lifetime / self.lifetime_max);
 if (t < 0) t = 0;

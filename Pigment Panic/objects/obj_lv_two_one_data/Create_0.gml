@@ -5,5 +5,5 @@ global.level_tiles = [[Color.RED, Color.BLUE, Color.PURPLE],
 global.tiles_origin = [192, 192]
 global.tiles_scale = [3, 3]
 global.tiles_sep = [1, 1]
-
+global.ref_img = noone
 instance_destroy()

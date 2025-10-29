@@ -1,10 +1,10 @@
 /// obj_mixer_output : Left Pressed
 
 // If both are empty, nothing to do
-if (global.curr_color == Color.NONE && box_color == Color.NONE) exit;
+if (brush_top() == Color.NONE && box_color == Color.NONE) exit;
 
 // If the hand is empty, pick up the output color (and clear the box)
-if (global.curr_color == Color.NONE) {
+if not (brush_is_full()) {
     if (box_color != Color.NONE) {
         brush_push(box_color); // take the color
         box_color         = Color.NONE; // empty the output

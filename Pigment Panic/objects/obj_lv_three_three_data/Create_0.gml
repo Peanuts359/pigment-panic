@@ -9,7 +9,8 @@ global.level_tiles = [[13, 13, 13, 13, 13, 13, 13,  3, 13, 13],
        [12,  3,  3, 12, 12, 12, 12,  3, 12, 12],
        [12, 12, 12, 12, 13, 13, 13, 13,  4,  4],
        [ 4,  4,  4,  4,  4,  4,  4,  4,  4,  4]]
-global.tiles_origin = [144, 80]
-global.tiles_scale = [2, 2]
+global.tiles_origin = [196, 80]
+global.tiles_scale = [1.75, 1.75]
 global.tiles_sep = [0, 0]
+global.ref_img = spr_3_3_ref
 instance_destroy()
