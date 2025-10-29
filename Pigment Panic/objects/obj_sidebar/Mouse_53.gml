@@ -95,29 +95,30 @@ if (t != noone) {
 
             // Check 3 positions above click: left/center/right
             for (var i = -1; i <= 1; i++) {
+				for (var j = -1; j <= 0; j++) {
+	                var u = collision_point(
+	                    base_x + (i * t.sprite_width),
+	                    base_y + (j * t.sprite_height),
+	                    obj_tile_new,
+	                    false,
+	                    true
+	                );
 
-                var u = collision_point(
-                    base_x + (i * t.sprite_width),
-                    base_y - t.sprite_height,
-                    obj_tile_new,
-                    false,
-                    true
-                );
+	                if (u != noone) {
 
-                if (u != noone) {
+	                    var u_ok_to_paint =
+	                        !(u.fill_status != -1 && u.tile_health > 0);
 
-                    var u_ok_to_paint =
-                        !(u.fill_status != -1 && u.tile_health > 0);
+	                    var u_color_matches =
+	                        (u.desired_color == top_color);
 
-                    var u_color_matches =
-                        (u.desired_color == top_color);
-
-                    if (u_ok_to_paint && u_color_matches) {
-                        u.alarm[0]    = 1;
-                        u.tile_health = 1;
-                        global.filled_tiles += 1;
-                    }
-                }
+	                    if (u_ok_to_paint && u_color_matches) {
+	                        u.alarm[0]    = 1;
+	                        u.tile_health = 1;
+	                        global.filled_tiles += 1;
+	                    }
+	                }
+				}
             }
         }
 

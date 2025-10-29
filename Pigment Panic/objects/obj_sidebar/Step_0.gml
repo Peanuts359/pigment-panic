@@ -8,7 +8,7 @@
 if (!timer_fired && !completed) {
 
     // tick the spawn timer
-    drop_time -= delta_time / 1_000_000;
+    drop_time -= delta_time / 1_000_000 * global.time_mult;
 
     if (drop_time <= 0 && !completed) {
 
@@ -38,7 +38,7 @@ if (!timer_fired && !completed) {
 
     // --- LEVEL TIMER ---
     if (global.timer_active) {
-        global.time_left -= delta_time / 1_000_000; // seconds
+        global.time_left -= delta_time / 1_000_000 * global.time_mult; // seconds
     }
 
     // ran out of time?
