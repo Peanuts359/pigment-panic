@@ -1,13 +1,9 @@
-// size of the bar in pixels
 bar_w = 120;
 bar_h = 16;
 
-// colors
 bar_outline_col   = c_black;
-bar_back_col      = make_color_rgb(60, 60, 60);     // dark gray bg
-bar_fill_low_col  = make_color_rgb(255, 255, 0);    // yellow at low combo
-bar_fill_high_col = make_color_rgb(255, 0, 0);      // red at high combo
+bar_back_col      = make_color_rgb(50, 50, 50);
+bar_fill_low_col  = make_color_rgb(0, 200, 255);   // blue at full time
+bar_fill_high_col = make_color_rgb(255, 50, 50);   // red as time runs out
 txt_col           = c_white;
-
-// font override
-font_used         = fnt_ui_small;
+font_used         = -1; // default font
