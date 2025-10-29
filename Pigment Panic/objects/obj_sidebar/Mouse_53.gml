@@ -47,7 +47,7 @@ if (t != noone) {
     // We'll store some values from the target tile (t) BEFORE diving into with(),
     // so we can still access them in our outer scope:
     var tile_ok_to_paint =
-        !(t.fill_status != -1 && t.tile_health > 0); // not already painted+healthy
+        !(t.fill_status != -1 && t.tile_health > 0 && t.color_index == t.desired_color); // not already painted+healthy
 
     var tile_color_matches =
         (t.desired_color == top_color);              // correct color for this tile
@@ -107,7 +107,7 @@ if (t != noone) {
 	                if (u != noone) {
 
 	                    var u_ok_to_paint =
-	                        !(u.fill_status != -1 && u.tile_health > 0);
+	                        !(u.fill_status != -1 && u.tile_health > 0 && u.color_index == u.desired_color);
 
 	                    var u_color_matches =
 	                        (u.desired_color == top_color);
