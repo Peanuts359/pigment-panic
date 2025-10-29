@@ -15,4 +15,5 @@ global.tiles_origin = [96, 32]
 global.tiles_scale = [1.75, 1.75]
 global.tiles_sep = [0, 0]
 global.max_sand_spawn = [96 + 1.75 * (array_length(global.level_tiles) - 2) * 64, 96 + 1.75 * (array_length(global.level_tiles) - 2) * 64]
+global.ref_img = spr_4_1_ref
 instance_destroy()
