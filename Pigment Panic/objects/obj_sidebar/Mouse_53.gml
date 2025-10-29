@@ -6,11 +6,29 @@ var brush_type = brush.current_brush
 // Drops first (they win)
 var d = collision_point(mx, my, obj_drop, false, true);
 // If using the knife, then skip this block of code
-if (d != noone) and brush_type < 3 {
+if (d != noone && brush_type < 3) {
     with (d) {
-        var success = brush_push(drop_color);
-        if success instance_destroy();
+        var pushed_any = false;
+
+        // how many charges this drop gives
+        var pickup_count = (image_xscale > 2) ? 2 : 1;
+
+        repeat (pickup_count) {
+            // attempt to push the drop's color onto the brush stack
+            if (brush_push(drop_color)) {
+                pushed_any = true;
+            } else {
+                // brush is full; stop trying
+                break;
+            }
+        }
+
+        // only consume the drop if we actually stored something
+        if (pushed_any) {
+            instance_destroy();
+        }
     }
+
     exit;
 }
 
