@@ -134,6 +134,7 @@
     {"id":{"name":"snd_mistake","path":"sounds/snd_mistake/snd_mistake.yy",},},
     {"id":{"name":"spr_1_1","path":"sprites/spr_1_1/spr_1_1.yy",},},
     {"id":{"name":"spr_1_2","path":"sprites/spr_1_2/spr_1_2.yy",},},
+    {"id":{"name":"spr_1_3_ref","path":"sprites/spr_1_3_ref/spr_1_3_ref.yy",},},
     {"id":{"name":"spr_1_3","path":"sprites/spr_1_3/spr_1_3.yy",},},
     {"id":{"name":"spr_2_1","path":"sprites/spr_2_1/spr_2_1.yy",},},
     {"id":{"name":"spr_2_2","path":"sprites/spr_2_2/spr_2_2.yy",},},
