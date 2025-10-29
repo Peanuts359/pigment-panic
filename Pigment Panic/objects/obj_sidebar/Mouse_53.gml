@@ -57,28 +57,29 @@ if (t != noone) {
 		// adjacent tiles
         if (brush_type == 2) {
             for (var i = -1; i <= 1; i++) {
+				for (var j = -1; j <= 0; j++) {
+	                var u = collision_point(
+	                    x + (i * sprite_width),
+	                    y + (j * sprite_height),
+	                    obj_tile_new,
+	                    false,
+	                    true
+	                );
 
-                var u = collision_point(
-                    x + (i * sprite_width),
-                    y - sprite_height,
-                    obj_tile_new,
-                    false,
-                    true
-                );
+	                if (u != noone) {
 
-                if (u != noone) {
+	                    // skip if already painted + healthy
+	                    if (!(u.fill_status != -1 && u.tile_health > 0)) {
 
-                    // skip if already painted + healthy
-                    if (!(u.fill_status != -1 && u.tile_health > 0)) {
-
-                        // must match same color as our top_color
-                        if (u.desired_color == top_color) {
-                            u.alarm[0]    = 1;
-                            u.tile_health = 1;
-                            global.filled_tiles += 1;
-                        }
-                    }
-                }
+	                        // must match same color as our top_color
+	                        if (u.desired_color == top_color) {
+	                            u.alarm[0]    = 1;
+	                            u.tile_health = 1;
+	                            global.filled_tiles += 1;
+	                        }
+	                    }
+	                }
+				}
             }
         }
 
