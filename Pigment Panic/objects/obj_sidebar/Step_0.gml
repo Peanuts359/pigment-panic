@@ -6,7 +6,7 @@
 /// @description Execute Code
 // --- TIMER ---
 if (!timer_fired && !completed) {
-	drop_time -= delta_time / 1_000_000;
+	drop_time -= delta_time / 1_000_000 * global.time_mult;
 	if (drop_time <= 0 && !completed) {
 		drop_time = 2
 		var xx = irandom(room_width - 320 - 32);
@@ -14,7 +14,7 @@ if (!timer_fired && !completed) {
 		instance_create_layer(xx, yy, "Drops", obj_drop);
 	}
 	if (global.timer_active) {
-		global.time_left -= delta_time / 1_000_000; // in seconds
+		global.time_left -= delta_time / 1_000_000 * global.time_mult; // in seconds
 	}
     if (global.time_left <= 0) {
 		global.time_left = 0;

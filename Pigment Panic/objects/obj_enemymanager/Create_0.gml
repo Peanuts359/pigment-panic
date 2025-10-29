@@ -1,1 +1,1 @@
-alarm[0] = 1200
+sand_timer = 1200
