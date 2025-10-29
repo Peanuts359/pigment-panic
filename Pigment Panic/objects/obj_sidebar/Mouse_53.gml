@@ -3,34 +3,66 @@
 var mx = mouse_x, my = mouse_y;
 var brush_type = brush.current_brush
 
-// Drops first (they win)
 var d = collision_point(mx, my, obj_drop, false, true);
-// If using the knife, then skip this block of code
-if (d != noone) and brush_type < 3 {
+
+// If we're not using the knife, allow picking up paint
+if (d != noone && brush_type < 3) {
     with (d) {
-        var success = brush_push(drop_color);
-        if success instance_destroy();
+        var pushed_any = false;
+
+        // how many charges this drop gives
+        var pickup_count = (image_xscale > 2.5) ? 2 : 1;
+
+        repeat (pickup_count) {
+            // attempt to push the drop's color onto the brush stack
+            if (brush_push(drop_color)) {
+                pushed_any = true;
+            } else {
+                // brush is full; stop trying
+                break;
+            }
+        }
+
+        // only consume the drop if we actually stored something
+        if (pushed_any) {
+            instance_destroy();
+        }
     }
+
     exit;
 }
 
 // Then tiles
-// TODO: Include separate logic for knife
 var t = collision_point(mx, my, obj_tile_new, false, true);
+var top_color = brush_top();          // color currently at top of stack
 
 if (t != noone) {
-	var top_color = brush_top();
-    with (t) {
-		
 
-        // if tile already colored and healthy, skip
-        if (fill_status != -1 && tile_health > 0) exit;
+    // must at least be holding some color unless we're the knife
+    // (knife logic will be special-cased below if you want it to work empty)
+    if (brush_type != 3 && top_color == Color.NONE) {
+        exit;
+    }
 
-        // must be holding at least one color
-        if (top_color == Color.NONE) exit;
+    // We'll store some values from the target tile (t) BEFORE diving into with(),
+    // so we can still access them in our outer scope:
+    var tile_ok_to_paint =
+        !(t.fill_status != -1 && t.tile_health > 0); // not already painted+healthy
 
-        // color must match this tile's required color
-        if (desired_color != top_color) {
+    var tile_color_matches =
+        (t.desired_color == top_color);              // correct color for this tile
+
+    // If it's a "regular paint attempt" (not knife):
+    if (brush_type != 3) {
+
+        // First, check if it's already painted/healthy
+        if (!tile_ok_to_paint) {
+            exit;
+        }
+
+        // Now check color correctness
+        if (!tile_color_matches) {
+            // wrong color penalty
             global.mistakes += 1;
             audio_play_sound(snd_mistake, 0, false);
 
@@ -40,27 +72,33 @@ if (t != noone) {
 
             exit;
         }
-        // correct color → paint once
-		// we set an alarm to delay the painting of the tile if needed
-		if (brush_type == 1) {
-			alarm[0] = 30
-			tile_health = 2
-		} else {
-			alarm[0] = 1
-			tile_health = 1
-		}
 
-        // increment level counters (the sidebar is `other` here)
+        // If we got here: we're allowed to apply paint to t
+
+        // --- apply paint to the clicked tile ---
+        // slow brush vs normal:
+        if (brush_type == 1) {            // e.g. "calbrush", slower / multi-hit
+            t.alarm[0]    = 30;           // delayed fill
+            t.tile_health = 2;
+        } else {
+            t.alarm[0]    = 1;
+            t.tile_health = 1;
+        }
+
         global.filled_tiles += 1;
-		
-		// If using the fan brush, calculate if we need to paint
-		// adjacent tiles
+
+        // --- fan brush splash (brush_type == 2) ---
         if (brush_type == 2) {
+            // We'll grab t.x/t.y first so we fan around from that location.
+            var base_x = t.x;
+            var base_y = t.y;
+
+            // Check 3 positions above click: left/center/right
             for (var i = -1; i <= 1; i++) {
 
                 var u = collision_point(
-                    x + (i * sprite_width),
-                    y - sprite_height,
+                    base_x + (i * t.sprite_width),
+                    base_y - t.sprite_height,
                     obj_tile_new,
                     false,
                     true
@@ -68,27 +106,40 @@ if (t != noone) {
 
                 if (u != noone) {
 
-                    // skip if already painted + healthy
-                    if (!(u.fill_status != -1 && u.tile_health > 0)) {
+                    var u_ok_to_paint =
+                        !(u.fill_status != -1 && u.tile_health > 0);
 
-                        // must match same color as our top_color
-                        if (u.desired_color == top_color) {
-                            u.alarm[0]    = 1;
-                            u.tile_health = 1;
-                            global.filled_tiles += 1;
-                        }
+                    var u_color_matches =
+                        (u.desired_color == top_color);
+
+                    if (u_ok_to_paint && u_color_matches) {
+                        u.alarm[0]    = 1;
+                        u.tile_health = 1;
+                        global.filled_tiles += 1;
                     }
                 }
             }
         }
 
-        // recompute percentage to 2dp
+        // --- update cleared % ---
         if (global.total_tiles > 0) {
             global.tiles_cleared =
                 (global.filled_tiles / global.total_tiles) * 100;
         }
 
-        // spend the paint we just used
+        // --- consume one paint from the brush stack ---
         brush_pop_top();
+
+        // --- combo gain (successful placement counts as 1 action) ---
+		global.combo_count += 1;
+		global.combo_time_max = combo_calc_time_max(global.combo_count);
+		global.combo_time     = global.combo_time_max;
+
+        exit;
+    }
+
+	// knife does nothing yet
+    if (brush_type == 3) {
+        exit;
     }
 }

@@ -5,7 +5,7 @@ var t = 1 - (self.lifetime / self.lifetime_max);
 if (t < 0) t = 0;
 if (t > 1) t = 1;
 
-var scale_now = 1 + t;
+var scale_now = 1 + 2 * t;
 
 image_xscale = scale_now;
 image_yscale = scale_now;

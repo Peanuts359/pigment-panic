@@ -50,5 +50,16 @@ if (global.forfeited) {
 } else {
 	draw_text(cx, y0,              txt_grade);
 	draw_text(cx, y0 + line_h,     txt_mistakes);
-	draw_text(cx, y0 + line_h * 2, txt_clear);	
+	if (global.timer_active) {
+		var total_left = ceil(global.time_left);
+		var mins_left = floor(total_left / 60);
+		var secs_left = total_left - 60 * mins_left;
+		
+		var mins_secs_left = "Time remaining: " + string(mins_left) + ":" + string(secs_left);
+		draw_text(cx, y0 + line_h * 2, mins_secs_left);
+		draw_text(cx, y0 + line_h * 3, txt_clear);	
+	} else {
+		draw_text(cx, y0 + line_h * 2, txt_clear);	
+	}
+
 }
