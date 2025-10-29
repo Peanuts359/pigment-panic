@@ -6,24 +6,49 @@
 /// @description Execute Code
 // --- TIMER ---
 if (!timer_fired && !completed) {
-	drop_time -= delta_time / 1_000_000 * global.time_mult;
-	if (drop_time <= 0 && !completed) {
-		drop_time = 2
-		var xx = irandom(room_width - 320 - 32);
-		var yy = irandom(room_height - 32);
-		instance_create_layer(xx, yy, "Drops", obj_drop);
-	}
-	if (global.timer_active) {
-		global.time_left -= delta_time / 1_000_000 * global.time_mult; // in seconds
-	}
+
+    // tick the spawn timer
+    drop_time -= delta_time / 1_000_000;
+
+    if (drop_time <= 0 && !completed) {
+
+        // --- SPAWN LOGIC SCALED BY COMBO STREAK ---
+
+        // how intense the streak is, clamped to [0..1]
+        // combo_count 0  -> 0.0 (calm)
+        // combo_count 5+ -> 1.0 (max pressure)
+        var combo_cap    = 5;
+        var streak_level = clamp(global.combo_count / combo_cap, 0, 1);
+
+        // spawn timing:
+        // at streak_level = 0    -> spawn_interval = global.drop_interval
+        // at streak_level = 1    -> spawn_interval = min_spawn
+        var min_spawn = 0.5; // fastest allowed spawn in seconds (tune this!)
+        var spawn_interval = global.drop_interval
+                           - streak_level * (global.drop_interval - min_spawn);
+
+        // reset drop_time using the scaled interval
+        drop_time = spawn_interval;
+
+        // actually spawn a drop somewhere valid
+        var xx = irandom(room_width  - 320 - 32); // avoiding sidebar width?
+        var yy = irandom(room_height - 32);
+        instance_create_layer(xx, yy, "Drops", obj_drop);
+    }
+
+    // --- LEVEL TIMER ---
+    if (global.timer_active) {
+        global.time_left -= delta_time / 1_000_000; // seconds
+    }
+
+    // ran out of time?
     if (global.time_left <= 0) {
-		global.time_left = 0;
+        global.time_left = 0;
         timer_fired = true;
-        dlg_id = show_message_async(
-            "Time’s Up!"
-        );
+        dlg_id = show_message_async("Time’s Up!");
     }
 }
+
 
 // --- TILE CHECK ---
 if (!completed) {
@@ -50,4 +75,16 @@ if (!completed) {
             "Level Complete!"
         );
     }
+}
+
+// --- COMBO DECAY ---
+if (global.combo_time > 0) {
+    global.combo_time -= delta_time / 1_000_000;
+}
+
+// expire combo if timer ran out
+if (global.combo_time <= 0) {
+    global.combo_time     = 0;
+    global.combo_count    = 0;
+    global.combo_time_max = combo_calc_time_max(global.combo_count); // back to 5s
 }

@@ -11,7 +11,7 @@ timer_fired = false;
 completed = false;
 
 global.drop_interval = drop_interval;
-drop_time = 2;
+drop_time = global.drop_interval;
 
 // Store a reference to the brush object
 brush = instance_nearest(x, y, obj_brush)
