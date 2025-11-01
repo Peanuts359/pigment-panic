@@ -1,16 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"obj_start",
+  "%Name":"obj_but_start",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":true,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":true,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_start",
+  "name":"obj_but_start",
   "overriddenProperties":[],
   "parent":{
-    "name":"ui",
-    "path":"folders/Objects/ui.yy",
+    "name":"start",
+    "path":"folders/Objects/start.yy",
   },
   "parentObjectId":null,
   "persistent":false,

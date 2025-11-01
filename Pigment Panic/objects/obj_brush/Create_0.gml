@@ -17,7 +17,7 @@ brushes  = [spr_brush_1, spr_calbrush_1, spr_fanbrush_1, spr_knife_1];
 outlines = [spr_brush_2, spr_calbrush_2, spr_fanbrush_2, spr_knife_2];
 origins  = [[12,72],[27,81],[24,69],[27,69]];
 
-default_clickables = [obj_start, obj_color_slot, obj_tap, obj_lv_one_one, obj_lv_one_two, obj_lv_one_three,
+default_clickables = [obj_but_start, obj_but_creds, obj_but_help, obj_but_quit, obj_color_slot, obj_tap, obj_lv_one_one, obj_lv_one_two, obj_lv_one_three,
 					  obj_lv_two_one, obj_lv_two_two, obj_lv_two_three,
 					  obj_lv_three_one, obj_lv_three_two, obj_lv_three_three,
 					  obj_lv_four_one,

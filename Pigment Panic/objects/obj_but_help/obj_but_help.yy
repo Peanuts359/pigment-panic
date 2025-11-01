@@ -1,11 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_but_quit",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":true,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_but_help",
+  "eventList":[],
   "managed":true,
-  "name":"obj_but_quit",
+  "name":"obj_but_help",
   "overriddenProperties":[],
   "parent":{
     "name":"start",
@@ -30,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_but_quit",
-    "path":"sprites/spr_but_quit/spr_but_quit.yy",
+    "name":"spr_but_help",
+    "path":"sprites/spr_but_help/spr_but_help.yy",
   },
   "spriteMaskId":null,
   "visible":true,

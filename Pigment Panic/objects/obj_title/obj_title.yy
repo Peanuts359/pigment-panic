@@ -6,8 +6,8 @@
   "name":"obj_title",
   "overriddenProperties":[],
   "parent":{
-    "name":"ui",
-    "path":"folders/Objects/ui.yy",
+    "name":"start",
+    "path":"folders/Objects/start.yy",
   },
   "parentObjectId":null,
   "persistent":false,
