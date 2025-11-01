@@ -26,6 +26,13 @@ global.timer_active = false;
 /// @DnDArgument : "var" "drop_life"
 global.drop_life = 4;
 
+/// @DnDAction : YoYo Games.Common.Set_Global
+/// @DnDVersion : 1
+/// @DnDHash : 2F8FF6DD
+/// @DnDArgument : "value" "true"
+/// @DnDArgument : "var" "playing"
+global.playing = true;
+
 /// @DnDAction : YoYo Games.Rooms.Go_To_Room
 /// @DnDVersion : 1
 /// @DnDHash : 5C62CDB1
