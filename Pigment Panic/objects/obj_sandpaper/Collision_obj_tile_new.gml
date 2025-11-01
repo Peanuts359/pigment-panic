@@ -3,7 +3,8 @@ if (other.colliding == false) {
     other.damage()
     
     // Set the colliding variable to true so the code doesn't run again.
-    other.colliding = true; 
+    other.colliding = true;
+	other.alarm[2] = 300
 }
 
 if (other.fill_status == 1) {
