@@ -7,7 +7,7 @@ var next_room;
 
 switch (to_level) {
     case 1:
-        next_room = rm_lv_one;
+        next_room = rm_lv_base;
         break;
     case 2:
         next_room = rm_lv_two_mix;
@@ -18,6 +18,8 @@ switch (to_level) {
     case 4:
         next_room = rm_lv_four;
         break;
+	case 5:
+		next_room = rm_lv_five;
     default:
         next_room = noone;
         break;
@@ -25,6 +27,7 @@ switch (to_level) {
 
 
 if next_room == noone {
+	global.playing = true;
 	room_goto(rm_level_select);
 } else {
 	room_goto(next_room);

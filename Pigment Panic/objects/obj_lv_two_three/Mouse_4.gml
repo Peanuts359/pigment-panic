@@ -8,9 +8,9 @@ instance_create_layer(0, 0, "Instances", obj_lv_two_three_data);
 /// @DnDAction : YoYo Games.Common.Set_Global
 /// @DnDVersion : 1
 /// @DnDHash : 05036AAF
-/// @DnDArgument : "value" "1"
+/// @DnDArgument : "value" "2"
 /// @DnDArgument : "var" "last_visited_level"
-global.last_visited_level = 1;
+global.last_visited_level = 2;
 
 /// @DnDAction : YoYo Games.Common.Set_Global
 /// @DnDVersion : 1
@@ -25,6 +25,13 @@ global.timer_active = true;
 /// @DnDArgument : "value" "4"
 /// @DnDArgument : "var" "drop_life"
 global.drop_life = 4;
+
+/// @DnDAction : YoYo Games.Common.Set_Global
+/// @DnDVersion : 1
+/// @DnDHash : 2F91E55F
+/// @DnDArgument : "value" "true"
+/// @DnDArgument : "var" "playing"
+global.playing = true;
 
 /// @DnDAction : YoYo Games.Rooms.Go_To_Room
 /// @DnDVersion : 1

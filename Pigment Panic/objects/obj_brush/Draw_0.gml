@@ -1,5 +1,6 @@
 /// obj_brush : Draw
 
+
 // 1. draw the actual brush sprite following the mouse
 var mx = mouse_x;
 var my = mouse_y;
@@ -14,6 +15,7 @@ draw_sprite_ext(
     1
 );
 
+if !global.playing exit;
 // 2) draw the stack HUD (vertical; topmost element at the bottom)
 
 // a) tunable visual constants
