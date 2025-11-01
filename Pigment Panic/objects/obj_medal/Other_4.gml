@@ -1,4 +1,4 @@
-if global.continuing {
+if global.continuing or global.forfeited {
 	global.grade = Grade.NONE;
 } else {
 	if (global.tiles_cleared >= 100) {

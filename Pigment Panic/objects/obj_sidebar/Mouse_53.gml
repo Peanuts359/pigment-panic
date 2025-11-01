@@ -11,7 +11,7 @@ if (d != noone && brush_type < 3) {
         var pushed_any = false;
 
         // how many charges this drop gives
-        var pickup_count = (image_xscale > 2.5) ? 2 : 1;
+        var pickup_count = (image_xscale == 3) ? 2 : 1;
 
         repeat (pickup_count) {
             // attempt to push the drop's color onto the brush stack

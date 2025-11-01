@@ -8,8 +8,8 @@
   "name":"obj_but_quit",
   "overriddenProperties":[],
   "parent":{
-    "name":"ui",
-    "path":"folders/Objects/ui.yy",
+    "name":"start",
+    "path":"folders/Objects/start.yy",
   },
   "parentObjectId":null,
   "persistent":false,
