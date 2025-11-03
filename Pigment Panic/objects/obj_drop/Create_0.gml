@@ -1,19 +1,27 @@
-/// obj_drop : Create
 image_speed  = 0;
+
+// pick color/frame however you do it
 image_index  = global.drop_colors[ irandom(array_length(global.drop_colors) - 1) ];
 drop_color   = image_index;
 
-self.lifetime     = global.drop_life;
-self.lifetime_max = self.lifetime;
+// lifetime (seconds)
+lifetime     = global.drop_life;
+lifetime_max = lifetime;
 
-// visual tunables
-self.max_scale       = 3;      // final size (1 → 3)
-self.grow_portion    = 0.75;   // reach max at 75%
-self.flicker_portion = 0.25;   // last 25% is flicker zone
-self.flicker_blinks  = 3;      // how many full on/off blinks
-self.alpha_on        = 1.0;    // normal alpha
-self.alpha_off       = 0.2;    // dim during flicker
+// phase fractions
+grow_portion   = 0.75;  // reach max size here
+pulse_portion  = 0.20;  // warning pulse
+shrink_portion = 0.05;  // rapid shrink end
 
+// visuals
+max_scale   = 3.0;
+pulse_amp   = 0.12;
+pulse_speed = 16.0;
+
+time_accum   = 0;
+image_alpha  = 1;
 image_xscale = 1;
 image_yscale = 1;
-image_alpha  = self.alpha_on;
+
+// NEW: provides two charges once max-size reached
+two_stacks = false;
