@@ -1,3 +1,5 @@
+if global.paused exit;
+
 var dt = (delta_time / 1_000_000) * global.time_mult;
 time_accum += dt;
 
