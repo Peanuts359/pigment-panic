@@ -1,10 +1,10 @@
 // Draw fill (if any)
 if color_index != Color.NONE {
 	draw_self()
-	image_blend =  make_colour_rgb(
+	draw_sprite_ext(spr_fill, 0, x, y, image_xscale, image_yscale, 0, make_colour_rgb(
 		global.Color_rgb[color_index][0], 
 		global.Color_rgb[color_index][1], 
-		global.Color_rgb[color_index][2])
+		global.Color_rgb[color_index][2]),1)
 }
 
 // Draw border
