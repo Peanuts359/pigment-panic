@@ -4,6 +4,11 @@ global.total_tiles = 0;
 global.filled_tiles = 0;
 global.tiles_cleared = 0; 
 
+global.forfeit_clicks = 0;
+global.forfeit_last_time  = 0;
+global.forfeit_dialog = -1;
+global.forfeited = false;
+
 dlg_id = -1;
 
 timer_fired = false;
