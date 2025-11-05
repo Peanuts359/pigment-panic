@@ -9,7 +9,7 @@ function damage() {
 	if color_index != Color.NONE and tile_health > 0 {
 		tile_health -= 1
 		if tile_health == 0 {
-			global.filled_tiles -= 1
+			color_index = Color.NONE
 		}
 	}
 }
