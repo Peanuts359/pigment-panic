@@ -207,6 +207,7 @@
     {"id":{"name":"spr_sidebar","path":"sprites/spr_sidebar/spr_sidebar.yy",},},
     {"id":{"name":"spr_tileframe_1","path":"sprites/spr_tileframe_1/spr_tileframe_1.yy",},},
     {"id":{"name":"spr_tileframe","path":"sprites/spr_tileframe/spr_tileframe.yy",},},
+    {"id":{"name":"spr_tileshield","path":"sprites/spr_tileshield/spr_tileshield.yy",},},
     {"id":{"name":"spr_time","path":"sprites/spr_time/spr_time.yy",},},
     {"id":{"name":"spr_title","path":"sprites/spr_title/spr_title.yy",},},
     {"id":{"name":"spr_water_drop_icon","path":"sprites/spr_water_drop_icon/spr_water_drop_icon.yy",},},
