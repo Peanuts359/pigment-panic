@@ -1,7 +1,5 @@
 /// @description Execute Code
 // obj_input : Global Left Pressed
-if (global.input_lock || global.paused) exit;
-
 var mx = mouse_x, my = mouse_y;
 var brush_type = brush.current_brush
 
@@ -13,7 +11,7 @@ if (d != noone && brush_type < 3) {
         var pushed_any = false;
 
         // how many charges this drop gives
-        var pickup_count = two_stacks ? 2 : 1;
+        var pickup_count = (image_xscale > 2.5) ? 2 : 1;
 
         repeat (pickup_count) {
             // attempt to push the drop's color onto the brush stack
@@ -49,7 +47,7 @@ if (t != noone) {
     // We'll store some values from the target tile (t) BEFORE diving into with(),
     // so we can still access them in our outer scope:
     var tile_ok_to_paint =
-        !(t.fill_status != -1 && t.tile_health > 0 && t.color_index == t.desired_color); // not already painted+healthy
+        !(t.fill_status != -1 && t.tile_health > 0); // not already painted+healthy
 
     var tile_color_matches =
         (t.desired_color == top_color);              // correct color for this tile
@@ -109,7 +107,7 @@ if (t != noone) {
 	                if (u != noone) {
 
 	                    var u_ok_to_paint =
-	                        !(u.fill_status != -1 && u.tile_health > 0 && u.color_index == u.desired_color);
+	                        !(u.fill_status != -1 && u.tile_health > 0);
 
 	                    var u_color_matches =
 	                        (u.desired_color == top_color);
