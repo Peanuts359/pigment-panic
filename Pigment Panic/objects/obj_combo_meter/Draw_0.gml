@@ -1,5 +1,14 @@
-var xx = x + bar_w / 2;
-var yy = y + bar_h - 2;
+var offx = 0;
+var offy = 0;
+
+if (shake_timer > 0)
+{
+    offx = irandom_range(-shake_amt, shake_amt);
+    offy = irandom_range(-shake_amt, shake_amt);
+}
+
+var xx = x + bar_w / 2 + offx;
+var yy = y + bar_h - 2 + offy;
 
 // ensure globals exist
 if (!variable_global_exists("combo_count") || 
