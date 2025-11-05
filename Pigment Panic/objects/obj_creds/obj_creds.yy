@@ -1,17 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_combo_meter",
+  "%Name":"obj_creds",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_combo_meter",
+  "name":"obj_creds",
   "overriddenProperties":[],
   "parent":{
-    "name":"ui",
-    "path":"folders/Objects/ui.yy",
+    "name":"start",
+    "path":"folders/Objects/start.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -31,7 +31,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_creds",
+    "path":"sprites/spr_creds/spr_creds.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

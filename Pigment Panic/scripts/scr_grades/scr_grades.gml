@@ -5,3 +5,4 @@ enum Grade {
 	GOLD = 2,
 	MASTERPIECE = 3
 }
+
