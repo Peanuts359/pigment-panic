@@ -24,4 +24,5 @@ image_xscale = 1;
 image_yscale = 1;
 
 // NEW: provides two charges once max-size reached
-two_stacks = false;
+drop_stacks = 1;
+reached_max = false
