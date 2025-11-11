@@ -148,6 +148,7 @@
     {"id":{"name":"scr_text","path":"scripts/scr_text/scr_text.yy",},},
     {"id":{"name":"scr_unordered_match","path":"scripts/scr_unordered_match/scr_unordered_match.yy",},},
     {"id":{"name":"scr_update_brush_color","path":"scripts/scr_update_brush_color/scr_update_brush_color.yy",},},
+    {"id":{"name":"Script12","path":"scripts/Script12/Script12.yy",},},
     {"id":{"name":"snd_mistake","path":"sounds/snd_mistake/snd_mistake.yy",},},
     {"id":{"name":"spr_1_1","path":"sprites/spr_1_1/spr_1_1.yy",},},
     {"id":{"name":"spr_1_2","path":"sprites/spr_1_2/spr_1_2.yy",},},
