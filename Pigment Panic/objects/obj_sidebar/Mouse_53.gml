@@ -7,6 +7,14 @@ var brush_type = brush.current_brush
 
 var d = collision_point(mx, my, obj_drop, false, true);
 
+if (brush_type == 3) {
+	var c = collision_point(mx, my, obj_corr_brush, false, true);
+	if c != noone {
+		global.spawn_pen = true
+		instance_destroy(c)
+	}
+}
+
 // If we're not using the knife, allow picking up paint
 if (d != noone && brush_type < 3) {
     with (d) {
