@@ -18,5 +18,5 @@ if (brush_timer <= 0) {
 	if global.spawn_pen {
 		instance_create_layer(-100, -100, "Drops", obj_corr_brush)
 	}
-	brush_timer = 600
+	global.spawn_pen = false
 }
