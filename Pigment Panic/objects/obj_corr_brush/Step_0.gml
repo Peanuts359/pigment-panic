@@ -1,6 +1,6 @@
-y += 0.02 * del_y * global.time_mult
-x += 0.02 * del_x * global.time_mult
-if hit == false && (abs(x - target_x) < 0.1) && (abs(y - target_y) < 0.1) {
+y += 0.02 * del_y * global.time_mult * speed_mult 
+x += 0.02 * del_x * global.time_mult * speed_mult
+if hit == false && ((target == noone) || ((abs(x - target_x) < 12) && (abs(y - target_y) < 12))) {
 	del_x = 0
 	del_y = 0
 	hit = true
