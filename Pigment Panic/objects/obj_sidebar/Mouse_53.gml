@@ -10,6 +10,13 @@ var d = collision_point(mx, my, obj_drop, false, true);
 if (brush_type == 3) {
 	var c = collision_point(mx, my, obj_corr_brush, false, true);
 	if c != noone {
+		for (var i = 0; i < array_length(c.stolen_paints); i++) {
+			var ang = random_range(0, 360)
+			var drop = instance_create_layer(c.x + (80 * dcos(ang)), c.y + (80 * dsin(ang)),
+				"Drops", obj_drop)	
+			drop.drop_color = c.stolen_paints[i]
+			drop.image_index = c.stolen_paints[i]
+		}
 		global.spawn_pen = true
 		instance_destroy(c)
 	}

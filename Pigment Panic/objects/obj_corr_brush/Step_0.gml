@@ -4,9 +4,10 @@ if hit == false && ((target == noone) || ((abs(x - target_x) < 12) && (abs(y - t
 	del_x = 0
 	del_y = 0
 	hit = true
-	if target != noone {
+	if instance_exists(target) {
+		var dc = target.drop_color
 		if array_length(stolen_paints) < 5 {
-			array_push(stolen_paints, target.drop_color)
+			array_push(stolen_paints, dc)
 		}
 		if array_length(stolen_paints) == 5 {
 			sprite_index = spr_corrbrush_2
