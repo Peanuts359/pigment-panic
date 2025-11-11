@@ -5,4 +5,5 @@ target_x = 0
 target_y = 0
 hit = false
 speed_mult = 1000
+stolen_paints = []
 alarm[0] = 2
