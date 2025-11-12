@@ -26,7 +26,10 @@ if (brush_type == 3) {
 if (d != noone && brush_type < 3) {
     with (d) {
         var stored = 0;
-        var pickup_count = two_stacks ? 2 : 1;
+
+        // how many charges this drop gives
+        var pickup_count = drop_stacks > 0 ? 1 : 0;
+		drop_stacks -= 1
 
         repeat (pickup_count) {
             // if full, make room by removing the oldest (bottom)
@@ -44,7 +47,9 @@ if (d != noone && brush_type < 3) {
         }
 
         if (stored > 0) {
-            instance_destroy(); // consume the drop only if we stored something
+			if (drop_stacks == 0) {
+				instance_destroy();
+			}
         }
     }
     exit;
