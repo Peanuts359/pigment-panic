@@ -10,27 +10,28 @@ var d = collision_point(mx, my, obj_drop, false, true);
 // If we're not using the knife, allow picking up paint
 if (d != noone && brush_type < 3) {
     with (d) {
-        var pushed_any = false;
-
-        // how many charges this drop gives
+        var stored = 0;
         var pickup_count = two_stacks ? 2 : 1;
 
         repeat (pickup_count) {
-            // attempt to push the drop's color onto the brush stack
+            // if full, make room by removing the oldest (bottom)
+            if (brush_is_full()) {
+                var tossed = brush_pop_bottom();
+                // if the stack was somehow locked/empty, break gracefully
+                if (tossed == Color.NONE && brush_is_full()) break;
+            }
+
             if (brush_push(drop_color)) {
-                pushed_any = true;
+                stored += 1;
             } else {
-                // brush is full; stop trying
-                break;
+                break; // couldn't push (shouldn’t happen after making room)
             }
         }
 
-        // only consume the drop if we actually stored something
-        if (pushed_any) {
-            instance_destroy();
+        if (stored > 0) {
+            instance_destroy(); // consume the drop only if we stored something
         }
     }
-
     exit;
 }
 
