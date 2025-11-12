@@ -13,7 +13,8 @@ if (d != noone && brush_type < 3) {
         var pushed_any = false;
 
         // how many charges this drop gives
-        var pickup_count = two_stacks ? 2 : 1;
+        var pickup_count = drop_stacks > 0 ? 1 : 0;
+		drop_stacks -= 1
 
         repeat (pickup_count) {
             // attempt to push the drop's color onto the brush stack
@@ -27,7 +28,9 @@ if (d != noone && brush_type < 3) {
 
         // only consume the drop if we actually stored something
         if (pushed_any) {
-            instance_destroy();
+			if (drop_stacks == 0) {
+				instance_destroy();
+			}
         }
     }
 
