@@ -13,4 +13,5 @@ global.tiles_origin = [196, 80]
 global.tiles_scale = [1.75, 1.75]
 global.tiles_sep = [0, 0]
 global.ref_img = spr_3_3_ref
+global.drop_life = 3
 instance_destroy()

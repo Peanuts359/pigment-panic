@@ -4,4 +4,5 @@ global.tiles_origin = [160, 192]
 global.tiles_scale = [6, 6]
 global.tiles_sep = [0, 0]
 global.ref_img = noone
+global.drop_life = 5
 instance_destroy()

@@ -8,4 +8,5 @@ global.tiles_origin = [256, 160]
 global.tiles_scale = [3, 3]
 global.tiles_sep = [0, 0]
 global.ref_img = spr_1_3_ref
+global.drop_life = 5
 instance_destroy()
