@@ -147,6 +147,7 @@
     {"id":{"name":"scr_level_build","path":"scripts/scr_level_build/scr_level_build.yy",},},
     {"id":{"name":"scr_levels","path":"scripts/scr_levels/scr_levels.yy",},},
     {"id":{"name":"scr_paintdrip_anim","path":"scripts/scr_paintdrip_anim/scr_paintdrip_anim.yy",},},
+    {"id":{"name":"scr_query_for_color","path":"scripts/scr_query_for_color/scr_query_for_color.yy",},},
     {"id":{"name":"scr_text","path":"scripts/scr_text/scr_text.yy",},},
     {"id":{"name":"scr_unordered_match","path":"scripts/scr_unordered_match/scr_unordered_match.yy",},},
     {"id":{"name":"scr_update_brush_color","path":"scripts/scr_update_brush_color/scr_update_brush_color.yy",},},

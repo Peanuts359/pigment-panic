@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_corrbrush_2",
-    "path":"sprites/spr_corrbrush_2/spr_corrbrush_2.yy",
+    "name":"spr_corrbrush_1",
+    "path":"sprites/spr_corrbrush_1/spr_corrbrush_1.yy",
   },
   "spriteMaskId":null,
   "visible":true,

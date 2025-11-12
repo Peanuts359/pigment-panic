@@ -1,7 +1,7 @@
 image_speed  = 0;
 
 // pick color/frame however you do it
-image_index  = global.drop_colors[ irandom(array_length(global.drop_colors) - 1) ];
+image_index  = scr_query_for_color();
 drop_color   = image_index;
 
 // lifetime (seconds)
