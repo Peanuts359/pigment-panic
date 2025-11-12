@@ -128,9 +128,7 @@ function request_start_level(lv)
     // Gate: warn if jumping ahead of planned sequence
     if (new_g > global.next_gimmick) {
         var msg = 
-            "This level introduces a mechanic we do not plan to introduce yet.\n" +
-            "We recommend playing the levels in numerical order.\n\n" +
-            "Play this level anyway?";
+            "This level introduces a mechanic we plan to introduce later. Play it anyway?";
         ctrl.dlg_id        = show_question_async(msg);  // stores the async id on the controller
         ctrl.pending_level = lv;
         return;
