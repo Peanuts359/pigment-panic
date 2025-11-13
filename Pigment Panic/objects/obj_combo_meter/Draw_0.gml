@@ -7,8 +7,8 @@ if (shake_timer > 0)
     offy = irandom_range(-shake_amt, shake_amt);
 }
 
-var xx = x + bar_w / 2 + offx;
-var yy = y + bar_h - 2 + offy;
+var xx = 300 + bar_w / 2 + offx;
+var yy = 1130 + bar_h - 2 + offy;
 
 // ensure globals exist
 if (!variable_global_exists("combo_count") || 

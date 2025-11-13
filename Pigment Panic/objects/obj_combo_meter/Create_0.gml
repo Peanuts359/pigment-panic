@@ -1,5 +1,5 @@
-bar_w = 120;
-bar_h = 16;
+bar_w = 520;
+bar_h = 100;
 
 bar_outline_col = c_black;
 bar_back_col    = make_color_rgb(50, 50, 50);
