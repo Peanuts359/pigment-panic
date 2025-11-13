@@ -89,6 +89,7 @@ function level_get_newest_gimmick(lv) {
 
 function level_start(lv) {
     var def = level_get_def(lv);
+	global.lv_name = lv;
 
     // ensure the level's data object exists
     instance_create_layer(0, 0, "Instances", def.data_obj);
@@ -136,4 +137,34 @@ function request_start_level(lv)
 
     // Otherwise start immediately
     level_start(lv);
+}
+
+function level_get_hint(lv) {
+    switch (lv) {
+        case Level.ONE_ONE:
+            return "Click drops to pick up paint, then click tiles to fill them.";
+			
+		case Level.ONE_TWO:
+			return "Five colors of drop can spawn: Red, Blue, Yellow, Black and White.";
+		
+        case Level.TWO_ONE:
+            return "Try mixing two colors to match new tiles.";
+		case Level.TWO_TWO:
+			return "Up to three colors can be mixed. This is the only way to get shades, and brown.";
+
+        case Level.THREE_TWO:
+            return "Fan brush paints a wider area – aim at clustered tiles!";
+		
+		case Level.FOUR_ONE:
+			return "";
+			
+		case Level.FIVE_ONE:
+			return "The corrupted brush is here..."
+			
+		case Level.FIVE_TWO:
+			return "Use everything you've learned in this final level!";
+
+        default:
+            return "";
+    }
 }
