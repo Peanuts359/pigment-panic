@@ -209,6 +209,8 @@
     {"id":{"name":"spr_mixer","path":"sprites/spr_mixer/spr_mixer.yy",},},
     {"id":{"name":"spr_paint_White","path":"sprites/spr_paint_White/spr_paint_White.yy",},},
     {"id":{"name":"spr_paintdrip_White","path":"sprites/spr_paintdrip_White/spr_paintdrip_White.yy",},},
+    {"id":{"name":"spr_path_dash_one","path":"sprites/spr_path_dash_one/spr_path_dash_one.yy",},},
+    {"id":{"name":"spr_path_dash_two","path":"sprites/spr_path_dash_two/spr_path_dash_two.yy",},},
     {"id":{"name":"spr_patrol_route","path":"sprites/spr_patrol_route/spr_patrol_route.yy",},},
     {"id":{"name":"spr_results","path":"sprites/spr_results/spr_results.yy",},},
     {"id":{"name":"spr_sandpaper","path":"sprites/spr_sandpaper/spr_sandpaper.yy",},},

@@ -19,4 +19,5 @@ global.max_sand_spawn = [160 + 1.5 * (array_length(global.level_tiles) - 2) * 64
 global.ref_img = spr_4_1_ref
 global.spawn_pen = false
 global.drop_life = 3
+global.curr_sand_path = 1
 instance_destroy()
