@@ -84,7 +84,7 @@ function level_get_def(lv) {
 function section_from_level(lv) {
     var section = (lv div 3) + 1;   // 0..2→1, 3..5→2, 6..8→3, 9..11→4
     if (section < 4) return section; // tiers 1–3
-    return (lv == 9) ? 4 : 5;        // 9→4, 10–11→5
+    return (lv <= 10) ? 4 : 5;        // 9→4, 10–11→5
 }
 
 // Maximum/newest gimmick a level introduces (so buttons can warn about “out of sequence”)
@@ -163,6 +163,7 @@ function is_popup_needed(lv) {
         case Level.ONE_ONE:    // Tier 1-1 tutorial
         case Level.TWO_ONE:    // Tier 2-1 tutorial
         case Level.THREE_ONE:  // Tier 3-1 tutorial
+		case Level.THREE_TWO:
         case Level.FOUR_ONE:   // Tier 4-1 tutorial
         case Level.FIVE_ONE:   // Tier 5-1 tutorial
             return true;
