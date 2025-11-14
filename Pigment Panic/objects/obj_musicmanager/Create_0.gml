@@ -1,4 +1,5 @@
 audio_play_sound(snd_menu_music, 10, true)
+current_music = snd_menu_music
 
 function play_music(new_music) {
     if (current_music != new_music) {
