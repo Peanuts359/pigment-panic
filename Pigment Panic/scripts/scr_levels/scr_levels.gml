@@ -30,6 +30,10 @@ function levels_init() {
 
 	var LEVEL_COUNT = Level.FIVE_TWO + 1;
 	global.Levels = array_create(LEVEL_COUNT, undefined);
+	
+
+	global.LevelTutorialSeen = array_create(LEVEL_COUNT, false);
+	global.show_tutorial_next_room = false;
 
     // Helper macro: packs a level definition
     var _def = function(_room, _data_obj, _gimmicks_array, _order) {
@@ -55,7 +59,7 @@ function levels_init() {
     // Level 3-1 teaches shading; 3-2 introduces Fan; 3-3 is still shading
     global.Levels[Level.THREE_ONE]   = _def(rm_lv_three_mix, obj_lv_three_one_data,   [Gimmick.SHADE],    6);
     global.Levels[Level.THREE_TWO]   = _def(rm_lv_three_mix, obj_lv_three_two_data,   [Gimmick.FAN],      7);
-    global.Levels[Level.THREE_THREE] = _def(rm_lv_three_mix, obj_lv_three_three_data, [Gimmick.SHADE],    8);
+    global.Levels[Level.THREE_THREE] = _def(rm_lv_three_mix, obj_lv_three_three_data, [Gimmick.FAN],    8);
 
     // -------- Tier 4 (rooms: rm_lv_four) --------
     // This tier brings Sandpaper
@@ -65,6 +69,9 @@ function levels_init() {
     // -------- Tier 5 (rooms: rm_lv_five) --------
     global.Levels[Level.FIVE_ONE]   = _def(rm_lv_five,  obj_lv_five_one_data,  [Gimmick.CBRUSH],   11); // boss tutorial
     global.Levels[Level.FIVE_TWO]   = _def(rm_lv_five,  obj_lv_five_two_data,  [Gimmick.CBRUSH],   12); // boss level
+	
+	
+	
 }
 
 // ------------------------------------------------------------
@@ -91,27 +98,33 @@ function level_get_newest_gimmick(lv) {
 
 function level_start(lv) {
     var def = level_get_def(lv);
-	global.lv_name = lv;
+    global.lv_name = lv;
 
-    // ensure the level's data object exists
+    // --- decide if this run should show a tutorial popup ---
+    var needsPop  = is_popup_needed(lv);
+    var firstTime = needsPop && !global.LevelTutorialSeen[lv];
+
+    // flag consumed in the *level room*
+    global.show_tutorial_next_room = firstTime;
+
+    // --- ensure the level's data object exists (you removed this earlier) ---
     instance_create_layer(0, 0, "Instances", def.data_obj);
 
-    // room/session flags
+    // --- room/session flags ---
     global.last_visited_level = section_from_level(lv);
     global.playing            = true;
-    global.timer_active       = false;
-	
-	if is_core_lv(lv) {
-		global.timer_active = true;	
-	}
 
-    // progression update
+    // timer is paused if we’re going to show the tutorial, otherwise only on core levels
+    global.timer_active = !firstTime && is_core_lv(lv);
+
+    // --- progression update ---
     var g = level_get_newest_gimmick(lv);
     global.last_gimmick = max(global.last_gimmick, g);
     global.next_gimmick = min(Gimmick.CBRUSH, global.last_gimmick + 1);
 
     room_goto(def.room);
 }
+
 
 function controller_get() {
     var ctrl = instance_find(obj_lv_controller, 0);
@@ -169,4 +182,20 @@ function is_core_lv(lv) {
     }
 
     return false;
+}
+
+function get_hint(lv) {
+	var sec = section_from_level(lv);
+	switch (sec) {
+		case 1: return spr_help_basic;
+		case 2: return spr_help_mix;
+		case 3:
+		if (lv == Level.THREE_ONE) {
+			return spr_help_mix;
+		} return spr_help_fan;
+		case 4: return spr_help_sand;
+		case 5: return spr_help_cbrush;
+		
+		default: return noone;
+	}
 }

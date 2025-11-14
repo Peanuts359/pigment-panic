@@ -1,32 +1,36 @@
+/// obj_pause_overlay : Draw GUI
 var gw = display_get_gui_width();
 var gh = display_get_gui_height();
 
-// dim the screen
+// 1) Dim the screen
 draw_set_alpha(alpha_dim);
 draw_set_color(c_black);
 draw_rectangle(0, 0, gw, gh, false);
 
-// panel
+// back to normal alpha
 draw_set_alpha(1);
-var pw = min(420, gw - 40);
-var ph = 180;
-var px = (gw - pw) * 0.5;
-var py = (gh - ph) * 0.5;
 
-draw_set_color(make_color_rgb(30,30,30));
-draw_rectangle(px, py, px + pw, py + ph, false);
+// ----------------------------------------------------
+// 2) "Paused" label in the top–left corner
+// ----------------------------------------------------
+draw_set_font(fnt_ui);            // or -1 if you're using the default
 draw_set_color(c_white);
-draw_rectangle(px, py, px + pw, py + ph, true);
-
-// text
-draw_set_alpha(1);
-draw_set_color(c_white);
-draw_set_font(fnt_ui); // optional: set your UI font
-
-draw_set_halign(fa_center);
-draw_set_valign(fa_middle);
-draw_text(px + pw * 0.5, py + ph * 0.5, "Paused");
-
-// (optional) restore defaults if other UI relies on left/top
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
+
+var margin = 16;
+draw_text(margin, margin, "Paused");
+
+// ----------------------------------------------------
+// 3) Hint sprite in the middle of the screen
+// ----------------------------------------------------
+// get_hint(lv) should return a sprite index or -1 if none
+var spr_hint = get_hint(global.lv_name);
+
+if (spr_hint != -1) {
+    var cx = gw * 0.5;
+    var cy = gh * 0.5;
+
+    // origin is already centre, so this will centre the sprite
+    draw_sprite(spr_hint, 0, cx, cy);
+}
