@@ -1,23 +1,13 @@
 global.drop_colors = [0, 1, 2, 3, 3, 4]
-global.level_tiles = [
-       [ 0,  3,  3, 14, 18, 18, 18,  3,  3, 13],
-       [23,  3, 14, 14, 18, 18, 13, 13,  3,  3],
-       [20,  3,  3, 18,  3,  3, 13,  3,  3,  1],
-       [ 3, 14,  3,  3, 18, 18,  3,  3, 12,  3],
-       [14,  3,  6,  3, 18, 18,  3, 12,  3,  1],
-       [18,  3, 18,  3,  6,  6,  3,  5,  3, 12],
-       [ 3, 18,  3,  3,  6,  6,  3,  3,  5,  3],
-       [18,  3,  3, 19,  3,  3, 13,  3,  3,  5],
-       [ 3,  3, 19, 19, 13, 13,  1,  1,  3,  3],
-       [13,  3,  3, 13, 13, 13,  1,  3,  3,  5]
-       ]
-global.tiles_origin = [196, 80]
-global.tiles_scale = [1.75, 1.75]
+global.level_tiles = [[ 0,  0,  1,  1,  2,  2],
+					  [3, 3, 3, 4, 4, 4]]
+global.tiles_origin = [96, 384]
+global.tiles_scale = [3.5, 3.5]
 global.tiles_sep = [0, 0]
-global.max_sand_spawn = [160 + 1.5 * (array_length(global.level_tiles) - 2) * 64,
-						 32 + 1.5 * (array_length(global.level_tiles) - 2) * 64]
-global.ref_img = spr_4_1_ref
+global.max_sand_spawn = [96 + 3.5 * (array_length(global.level_tiles) - 2) * 64,
+						 384 + 3.5 * (array_length(global.level_tiles) - 2) * 64]
+global.ref_img = noone
 global.spawn_pen = false
 global.drop_life = 3
-global.curr_sand_path = 1
+global.curr_sand_path = 0
 instance_destroy()

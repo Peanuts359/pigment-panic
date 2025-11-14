@@ -20,6 +20,7 @@ enum Level {
     THREE_TWO,    // Tier 3-2
     THREE_THREE,  // Tier 3-3
     FOUR_ONE,     // Tier 4-1
+	FOUR_TWO,
     FIVE_ONE,     // Tier 5-1 (boss tutorial)
     FIVE_TWO      // Tier 5-2 (boss level)
 }
@@ -59,10 +60,11 @@ function levels_init() {
     // -------- Tier 4 (rooms: rm_lv_four) --------
     // This tier brings Sandpaper
     global.Levels[Level.FOUR_ONE]   = _def(rm_lv_four,  obj_lv_four_one_data,  [Gimmick.SANDPAPER], 9);
+	global.Levels[Level.FOUR_TWO]   = _def(rm_lv_four,  obj_lv_four_two_data,  [Gimmick.SANDPAPER], 10);
 
     // -------- Tier 5 (rooms: rm_lv_five) --------
-    global.Levels[Level.FIVE_ONE]   = _def(rm_lv_five,  obj_lv_five_one_data,  [Gimmick.CBRUSH],   10); // boss tutorial
-    global.Levels[Level.FIVE_TWO]   = _def(rm_lv_five,  obj_lv_five_two_data,  [Gimmick.CBRUSH],   11); // boss level
+    global.Levels[Level.FIVE_ONE]   = _def(rm_lv_five,  obj_lv_five_one_data,  [Gimmick.CBRUSH],   11); // boss tutorial
+    global.Levels[Level.FIVE_TWO]   = _def(rm_lv_five,  obj_lv_five_two_data,  [Gimmick.CBRUSH],   12); // boss level
 }
 
 // ------------------------------------------------------------
