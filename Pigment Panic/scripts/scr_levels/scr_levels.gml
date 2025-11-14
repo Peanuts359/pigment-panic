@@ -100,6 +100,10 @@ function level_start(lv) {
     global.last_visited_level = section_from_level(lv);
     global.playing            = true;
     global.timer_active       = false;
+	
+	if is_core_lv(lv) {
+		global.timer_active = true;	
+	}
 
     // progression update
     var g = level_get_newest_gimmick(lv);
@@ -141,32 +145,28 @@ function request_start_level(lv)
     level_start(lv);
 }
 
-function level_get_hint(lv) {
+function is_popup_needed(lv) {
     switch (lv) {
-        case Level.ONE_ONE:
-            return "Click drops to pick up paint, then click tiles to fill them.";
-			
-		case Level.ONE_TWO:
-			return "Five colors of drop can spawn: Red, Blue, Yellow, Black and White.";
-		
-        case Level.TWO_ONE:
-            return "Try mixing two colors to match new tiles.";
-		case Level.TWO_TWO:
-			return "Up to three colors can be mixed. This is the only way to get shades, and brown.";
-
-        case Level.THREE_TWO:
-            return "Fan brush paints a wider area – aim at clustered tiles!";
-		
-		case Level.FOUR_ONE:
-			return "";
-			
-		case Level.FIVE_ONE:
-			return "The corrupted brush is here..."
-			
-		case Level.FIVE_TWO:
-			return "Use everything you've learned in this final level!";
-
-        default:
-            return "";
+        case Level.ONE_ONE:    // Tier 1-1 tutorial
+        case Level.TWO_ONE:    // Tier 2-1 tutorial
+        case Level.THREE_ONE:  // Tier 3-1 tutorial
+        case Level.FOUR_ONE:   // Tier 4-1 tutorial
+        case Level.FIVE_ONE:   // Tier 5-1 tutorial
+            return true;
     }
+
+    return false;
+}
+
+function is_core_lv(lv) {
+    switch (lv) {
+        case Level.ONE_THREE:    // Tier 1-3
+        case Level.TWO_THREE:    // Tier 2-3
+        case Level.THREE_THREE:  // Tier 3-3
+        case Level.FOUR_TWO:   // Tier 4-2
+        case Level.FIVE_TWO:   // Tier 5-2
+            return true;
+    }
+
+    return false;
 }
