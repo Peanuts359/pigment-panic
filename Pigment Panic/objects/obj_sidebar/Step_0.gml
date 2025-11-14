@@ -6,6 +6,7 @@
 /// @description Execute Code
 // --- TIMER ---
 if global.paused exit;
+if global.tutorial_active exit;
 
 if (!timer_fired && !completed) {
 

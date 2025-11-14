@@ -1,3 +1,5 @@
+if global.tutorial_active exit;
+
 // toggle pause
 global.paused    = !global.paused;
 global.time_mult = global.paused ? 0 : 1;   // freeze dt-based systems

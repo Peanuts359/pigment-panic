@@ -1,3 +1,5 @@
+if global.paused exit;
+
 // check for combo increase
 if (global.combo_count > prev_combo)
 {

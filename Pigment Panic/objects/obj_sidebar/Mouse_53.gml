@@ -1,6 +1,6 @@
 /// @description Execute Code
 // obj_input : Global Left Pressed
-if (global.input_lock || global.paused) exit;
+if (global.input_lock || global.paused || global.tutorial_active) exit;
 
 var mx = mouse_x, my = mouse_y;
 var brush_type = brush.current_brush
