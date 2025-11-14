@@ -1,4 +1,10 @@
-/// @DnDAction : YoYo Games.Rooms.Next_Room
-/// @DnDVersion : 1
-/// @DnDHash : 1E541649
-room_goto_next();
+if (!video_started) {
+    video_started = true;
+
+    video_id = video_open("splash.webm");
+
+    video_enable_loop(false);
+}
+
+
+//room_goto_next();
