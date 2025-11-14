@@ -1,11 +1,7 @@
-/// @DnDAction : YoYo Games.Common.Variable
-/// @DnDVersion : 1
-/// @DnDHash : 001C4E2E
-/// @DnDArgument : "var" "image_speed"
 image_speed = 0;
 
-/// @DnDAction : YoYo Games.Common.Variable
-/// @DnDVersion : 1
-/// @DnDHash : 6586F81E
-/// @DnDArgument : "var" "image_index"
-image_index = 0;
+if global.grade == Grade.NONE {
+	image_index = 0;
+} else {
+	image_index = global.grade + 1;	
+}

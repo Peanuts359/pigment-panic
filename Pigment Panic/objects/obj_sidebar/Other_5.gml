@@ -1,0 +1,1 @@
+global.grade = grade(global.lv_name, global.time_left, global.mistakes);

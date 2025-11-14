@@ -21,7 +21,8 @@ switch (global.grade) {
     case Grade.MASTERPIECE: grade_text = "MASTERPIECE"; break;
     case Grade.GOLD:        grade_text = "GOLD";        break;
     case Grade.SILVER:      grade_text = "SILVER";      break;
-    default:                grade_text = "BRONZE";      break;
+    case Grade.BRONZE:      grade_text = "BRONZE";      break;
+	default:                grade_text = "NONE";        break;
 }
 
 var txt_grade    = "Grade: "    + grade_text;
