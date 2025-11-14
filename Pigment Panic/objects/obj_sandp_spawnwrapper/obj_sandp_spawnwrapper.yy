@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_patrol_route",
-    "path":"sprites/spr_patrol_route/spr_patrol_route.yy",
+    "name":"spr_path_dash_one",
+    "path":"sprites/spr_path_dash_one/spr_path_dash_one.yy",
   },
   "spriteMaskId":null,
   "visible":true,
